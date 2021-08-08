@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import DailyBitsRouter from './routers/DailyBitsRouter'
+import './style/style.css'
 
-import { DailyBitsApp } from "./routers/DailyBitsApp";
 
 ReactDOM.render(
-    <DailyBitsApp />,
+    <DailyBitsRouter />,
   document.getElementById('root')
 );
