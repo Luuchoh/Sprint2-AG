@@ -138,25 +138,49 @@ const colors = {
 };
 
 const NavBarInicio = ({color}) => {
+
+
+  const ImgHome = (color) =>{
+    if(color == 'home') {
+      return './assets/icon-home-g.png'
+    }else{
+      return './assets/icon-home-w.png'
+    }
+  }
+  const ImgStatitics = (color) =>{
+    if(color == 'statitics') {
+      return './assets/icon-statitics-g.png'
+    }else{
+      return './assets/icon-statitics-w.png'
+    }
+  }
+  const ImgProfile = (color) =>{
+    if(color == 'profile') {
+      return './assets/icon-profile-g.png'
+    }else{
+      return './assets/icon-profile-w.png'
+    }
+  }
+
   return (
     <div>
       <MenuBar color={colors}>
         <Lista color={colors}>
           <LiHome>
             <AHome color={colors} to="/home">
-              <Icon src={`./assets/icon-home-${color?color:'w'}.png`} alt="icon" />
+              <Icon src={ImgHome(color)} alt="icon" />
               <Span>home</Span>
             </AHome>
           </LiHome>
           <LiStatitics>
             <AStatitics color={colors} to="/estadisticas">
-              <Icon src={`./assets/icon-statitics-${color?color:'w'}.png`} alt="icon" />
+              <Icon src={ImgStatitics(color)} alt="icon" />
               <Span>estadisticas</Span>
             </AStatitics>
           </LiStatitics>
           <LiProfile>
             <AProfile color={colors} to="/profile">
-              <Icon src={`./assets/icon-perfil-${color?color:'w'}.png`} alt="icon" />
+              <Icon src={ImgProfile(color)} alt="icon" />
               <Span>perfil</Span>
             </AProfile>
           </LiProfile>

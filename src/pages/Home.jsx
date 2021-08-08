@@ -14,7 +14,9 @@ const HomeDiv = styled.div`
 const Home = () => {
   return (
     <HomeDiv>
-      <NavBarInicio color={"g"} />
+      <NavBarInicio 
+      color={'home'}
+     />
       <ComponentHome />
     </HomeDiv>
   );
