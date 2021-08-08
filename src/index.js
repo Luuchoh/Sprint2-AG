@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { DailyBitsApp } from "./routers/DailyBitsApp";
+import DailyBitsApp from "./routers/DailyBitsApp";
 
 ReactDOM.render(
     <DailyBitsApp />,
