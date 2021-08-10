@@ -148,7 +148,7 @@ const Button = () => {
       <MainFooter color={colors}>
         <ContainerButton>
           <Link to="/home">
-            <ButtonMain color={colors} type="submit">
+            <ButtonMain color={colors} type="submit" >
               Comprobar
             </ButtonMain>
           </Link>

@@ -125,7 +125,7 @@ const Question2Comp = () => {
           <Options>
             <Option>
               <a>
-                <code id="code-pregunta4-section1">&ltbody&gt &lt/body&gt</code>
+                <code id="code-pregunta4-section1">body&gt &lt/body&gt</code>
               </a>
             </Option>
 

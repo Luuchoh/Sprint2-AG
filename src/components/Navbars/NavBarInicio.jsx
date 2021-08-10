@@ -103,7 +103,7 @@ const LiProfile = styled.li`
   }
 `;
 const AHome = styled(Link)`
-  color: ${(props) => props.color.white};
+  color: ${(props) => props.color.green};
 `;
 const AStatitics = styled(Link)`
   color: ${(props) => props.color.white};
