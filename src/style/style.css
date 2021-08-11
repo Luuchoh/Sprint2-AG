@@ -72,7 +72,7 @@ p.answer::after{
 .container-fluid.nav {
     height: 90px;
     background: #232E35;
-    justify-content: center!important;
+    justify-content: center;
     margin-top: -10px;
     margin-bottom: -10px;
     align-items: center;
@@ -112,10 +112,11 @@ p.answer::after{
 /*****PREGUNTAS HTML*****/
 .questionHTML {
     background: #16161A;
-    height: 100vh;
+    height: auto;
     align-items: center;
     display: flex;
     flex-direction: column;
+    /*padding-bottom: 5%;*/
     justify-content: center;
 }
 
@@ -133,11 +134,15 @@ p.answer::after{
 }
 .header__questionHTML p {
     font-family: Nunito;
+    /* font-style: normal; */
     font-weight: bold;
     font-size: 16px;
     margin-left: 5px;
     color: white;
     line-height: 24px;
+    /* display: inline-flex; */
+    /* text-align: center; */
+    /* letter-spacing: 0.005em; */
     padding-top: 15px;
 }
 
@@ -188,6 +193,7 @@ p.answer::after{
     letter-spacing: 0.005em;
     color: #FFFFFE;
     width: 328px;
+    /*height: 35px;*/
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -233,7 +239,7 @@ p.answer::after{
 .col.pregunta4 {
     text-align: -webkit-center;
     margin-left: 6px;
-    margin-top: 3%!important;
+    margin-top: 3%;
     height: max-content;
     border-radius: 20px;
     border: 1.8px solid #b099d8;
@@ -243,7 +249,7 @@ p.answer::after{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 95%!important;
+    width: 95%;
     margin-bottom: -22%;
     
 }
@@ -253,7 +259,7 @@ p.answer::after{
 }
 
 a>code {
-    color: deeppink!important;
+    color: deeppink;
 }
 .organizar {
     height: 250px;
@@ -354,7 +360,7 @@ color: #FFFFFE;
 }
 
 .container.pregunta4.row{
-    margin-right: calc(var(--bs-gutter-x) * -0.5)!important;
+    margin-right: calc(var(--bs-gutter-x) * -0.5);
 }
 
 /*********** ALERT *************/
@@ -368,7 +374,7 @@ color: #FFFFFE;
 
 .alert-success {
     color: #0f5132;
-    background-color: #ACFFCF!important;
+    background-color: #ACFFCF;
     border-color: #badbcc;
     margin-top: -3%;
 }
@@ -387,7 +393,7 @@ color: #FFFFFE;
 
 /*PARA ENLACES*/
 a:hover {
-    color: green;
+    color: #ffffff;
 }
 a{
     text-decoration: none;
@@ -397,7 +403,6 @@ a{
 /********ESTADISTICA**********/
 .container.estadisticas {
     max-width: 350px;
-    padding: 10px;
 }
 
 .col.estadistica p {
@@ -405,6 +410,11 @@ a{
     display: flex;
     justify-content: space-between;
     margin-left: 15px;
+}
+
+.col.estadistica img {
+    width: 22px;
+    height: 22px;
 }
 .col.estadistica {
     display: flex;
@@ -446,55 +456,4 @@ a{
 }
 .animacion{
     transition: all 2s ease .5s;
-}
-.button{
-    background-color: #72757e;
-    width: 345px;
-    height: 45px;
-    margin-top: 45px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    font-size: 18px;
-}
-.contenedor{
-    background:black;
-    display: block;
-    justify-content: center;
-    height: 100vh;
-    flex-wrap: wrap;
-    margin-left: -20px;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-.contenedor h3{
-    padding: 10px;
-    text-align: start;
-    margin-top: 0;
-    margin-left: 30px;
-}
-.perfil{
-    margin-top: 50px;
-}
-.contenedorNav{
-    background: black;
-    height: 60px;
-}
-.navegador{
-    display: flex;
-    justify-content: center;
-}
-.nav1, .nav2 {
-    margin-right: 40px;
-    margin-top: 20px;
-}
-.nav3{
-    margin-top: 20px;
-}
-a{
-    color: white;
-}
-.progreesBar{
-    background-color: white;
-    border-radius: 30px;
 }

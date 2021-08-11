@@ -1,21 +1,32 @@
-import { BrowserRouter,Switch,Route } from 'react-router-dom'
+import React from 'react';
+import { 
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect
+    } from "react-router-dom";
+
 import Home from '../pages/Home';
+import Question1 from '../pages/Question1';
+import Question2 from '../pages/Question2';
 import Profile from '../pages/Profile';
 import Statitics from '../pages/Statitics';
-import Navbar from '../pages/Navbar';
+
+
 
 const DailyBitsRouter = () => {
     return (
-        <BrowserRouter>
-            <div>
-            <Navbar />
+        <Router>
             <Switch>
-                <Route exact path="/home" component= {Home} />
-                <Route exact path="/estadisticas" component= {Statitics} />
-                <Route exact path="/Perfil" component= {Profile} />
+                
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/question1" component={Question1}/>
+                <Route exact path="/home" component={Question2}/>
+                <Route exact path="/Profile" component={Profile}/>
+                <Route exact path="/estadisticas" component={Statitics}/>
             </Switch>
-            </div>
-        </BrowserRouter>  
+            <Redirect to="/"/>
+        </Router>
     )
 }
 

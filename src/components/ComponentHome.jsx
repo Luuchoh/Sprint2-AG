@@ -1,0 +1,171 @@
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+
+const Main = styled.div`
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  background-color: ${(props) => props.color.black};
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: 728px) {
+    width: 80%;
+    margin: auto;
+    background-color: ${(props) => props.color.black};
+    margin-bottom: 76px;
+  }
+  @media (min-width: 1028px) {
+    width: 70%;
+    margin: auto;
+    background-color: ${(props) => props.color.black};
+    margin-top: 76px;
+  }
+`;
+
+const TitleMain = styled.h5`
+  width: 100%;
+  //padding: 16px;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  color: ${(props) => props.color.white};
+  box-sizing: border-box;
+`;
+const Categories = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height:100vh;
+  width: 100%;
+`;
+const Section1 = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0;
+  width: 80%;
+  text-align: center;
+`;
+const Section2 = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0;
+  width: 80%;
+  text-align: center;
+`;
+const Section3 = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0;
+  width: 80%;
+  text-align: center;
+`;
+const Language = styled.div`
+  width: calc(47% - 10px);
+`;
+
+const Span = styled.span`
+  margin: 10px 10px;
+  text-transform: uppercase;
+`;
+
+const ProgressBarCircle = styled.div`
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  border: 10px solid ${(props) => props.color.white};
+  margin: auto;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+`;
+const ALink = styled(Link)`
+  margin: 3px 5px 0 5px;
+`;
+const Image = styled.img`
+  width: 120%;
+`;
+
+// Colors
+
+const colors = {
+  black: "#16161A",
+  white: "#FFFFFE",
+};
+
+const ComponentHome = () => {
+  return (
+    <Main color={colors}>
+      <TitleMain color={colors} >
+        Practica tus conocimientos en la categoria que prefieras
+      </TitleMain>
+      <Categories>
+        <Section1>
+          <Language>
+            <ProgressBarCircle color={colors}>
+              <ALink  to="/question1">
+                <Image src="../assets/icon-html.png" alt="ask HTMl" />
+              </ALink>
+            </ProgressBarCircle>
+            <Span>html</Span>
+          </Language>
+        </Section1>
+        <Section2>
+          <Language>
+            <ProgressBarCircle color={colors}>
+              <ALink to="/question1">
+                <Image src="../assets/icon-CSS.png" alt="ask CSS" />
+              </ALink>
+            </ProgressBarCircle>
+            <Span>css</Span>
+          </Language>
+
+          <Language>
+            <ProgressBarCircle color={colors}>
+              <ALink to="/question1">
+                <Image src="../assets/icon-JS.png" alt="ask JS" />
+              </ALink>
+            </ProgressBarCircle>
+            <Span>js</Span>
+          </Language>
+        </Section2>
+
+        <Section3>
+          <Language>
+            <ProgressBarCircle color={colors}>
+              <ALink to="/question1">
+                <Image src="../assets/icon-figma.png" alt="ask Figma" />
+              </ALink>
+            </ProgressBarCircle>
+            <Span>figma</Span>
+          </Language>
+
+          <Language>
+            <ProgressBarCircle color={colors}>
+              <ALink to="/question1">
+                <Image src="../assets/icon-UX.png" alt="ask UX" />
+              </ALink>
+            </ProgressBarCircle>
+            <Span>ux</Span>
+          </Language>
+        </Section3>
+      </Categories>
+    </Main>
+  );
+};
+
+export default ComponentHome;

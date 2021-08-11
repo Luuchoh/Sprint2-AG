@@ -23,8 +23,9 @@
             "respuesta2":"Don’t repeat yourself",
             "respuesta3":"Don’t recicle year",
             "imag":"https://github.com/Dakkuti/Daily-bits/blob/master/assets/child2.png"
-        },
-
+        }],
+    
+    "selecc":[
         {
             "id":4,
             "opcion1":"<!DOCTYPE html>",
@@ -32,8 +33,9 @@
             "opcion3":"<head> </head>",
             "opcion4":"<html>",
             "opcion5":"</html>"
-        },
+        }],
 
+    "options":[
         {
             "id":5,
             "seleccion1":"https://github.com/Dakkuti/Daily-bits/blob/master/assets/angularLogo.png",
