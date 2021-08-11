@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 
-*{
-    margin: 0px;
-}
+
 /***LOGIN Y REGISTRO********/
 .img-Login {
     width: 100px;
@@ -109,16 +107,16 @@ color:white;
     font-size: 22px;
     line-height: 30px;
     color: #FFFFFE;
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     display: flex;
     width: 300px;
-    padding-bottom: 20px;
+    /*padding-bottom: 20px;*/
 }
 .ul-Question5Html{
     grid-template-columns: repeat(2, 3fr);
     display: grid;
     grid-gap: 7em;
-    margin-top:7%;
+    /*margin-top:7%;*/
     text-decoration: none;
 }
 .ul-Question5Html li{

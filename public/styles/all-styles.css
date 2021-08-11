@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root{
+    --font-family-rubik: 'Rubik', sans-serif;
+    --font-family: 'Nunito', sans-serif;
+    --color-negro: #000000;
+    --color-black: #16161A;
+    --color-white: #FFFFFE;
+    --color-grey: #94A1B2;
+    --color-green: #2CB67D;
+    --color-red: #EF4565;  
+    --color-purple: #6B47DC;   
+    --color-neutral: #232E35;
+    --color-primary: #7F5AF0;
+    --color-secondary: #A786DF;
+    --color-tertiary: #72757E;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-family);
+}

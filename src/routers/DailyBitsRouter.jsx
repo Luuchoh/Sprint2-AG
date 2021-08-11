@@ -1,31 +1,42 @@
-import { BrowserRouter,Switch,Route } from 'react-router-dom'
+
+import { BrowserRouter,Switch,Route , Redirect} from 'react-router-dom'
 import Home from '../pages/Home';
 import Profile from '../pages/Profile';
 import Statitics from '../pages/Statitics';
-import Navbar from '../pages/Navbar';
+//import Navbar from '../pages/Navbar';
 
 import {inicio}  from '../pages/inicio';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Question3 from '../pages/Question3';
 
+import Question1 from '../pages/Question1';
+import Question2 from '../pages/Question2';
+import {PrivateRouter}  from './PrivateRouter';
+
+
 const DailyBitsRouter = () => {
     return (
         <BrowserRouter>
-            <div>
             
             <Switch>
-                <Route exact path="/" component={inicio}/>
-                <Route exact path="/Login" component={Login}/>
-                <Route exact path="/Register" component={Register}/>
-                <Route exact path="/Question3" component={Question3}/>
+                <Route exact={true} path="/" component={inicio}/>
+                <Route exact={true} path="/Login" component={Login}/>
+                <Route exact={true} path="/Register" component={Register}/>
+ 
+                <PrivateRouter exact path="/Home" component= {Home} />
+                <PrivateRouter exact path="/Question1" component={Question1}/>
+                <PrivateRouter exact path="/Question2" component={Question2}/>
+                <PrivateRouter exact path="/Question3" component={Question3}/>
+                
 
-                <Route exact path="/home" component= {Home} />
-                <Route exact path="/estadisticas" component= {Statitics} />
-                <Route exact path="/Perfil" component= {Profile} />
+                
+                <PrivateRouter exact path="/Statitics" component= {Statitics} />
+                <PrivateRouter exact path="/profile" component= {Profile} />
             </Switch>
-            </div>
+            {/*<Redirect to="/"/>*/}
         </BrowserRouter>  
+
     )
 }
 
