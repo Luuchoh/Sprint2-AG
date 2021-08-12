@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -144,7 +144,7 @@ const colors = {
 
 const Button = () => {
   return (
-    <>
+    <Fragment>
       <MainFooter color={colors}>
         <ContainerButton>
           <Link to="/home">
@@ -179,7 +179,7 @@ const Button = () => {
           </Link>
         </ContainerIncorrectButton>
       </MainFooterIncorrect>
-    </>
+    </Fragment>
   );
 };
 

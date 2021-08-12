@@ -1,6 +1,6 @@
 import React from "react";
 import NavBarInicio from "../components/Navbars/NavBarInicio";
-import ComponentHome from "../components/Home/ComponentHome";
+import ComponentHome from "../components/ComponentHome";
 import styled from "styled-components";
 
 const HomeDiv = styled.div`
