@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 import styled from 'styled-components'
 
 const Perfil = styled.div`
@@ -22,6 +23,13 @@ const Profile = () => {
                 <p><strong>Cerrar sesión</strong></p>
             </div>
         </Perfil>
+=======
+import ProfileComp from '../components/ProfileComp';
+
+const Profile = () => {
+    return (
+        <ProfileComp></ProfileComp>
+>>>>>>> 8de5ff0c60dbb8aa62fd70810d86d1b1261be940
     )
 }
 

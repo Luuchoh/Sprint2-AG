@@ -1,13 +1,17 @@
 import React from 'react';
+<<<<<<< HEAD
 import NavBarInicio from '../components/Navbars/NavBarInicio';
+=======
+
+import StatiticsComp from '../components/StatiticsComp';
+>>>>>>> 8de5ff0c60dbb8aa62fd70810d86d1b1261be940
 
 
 const Statitics = () => {
     return (
-        <div>
-            <div className="container-fluid indexApp">
-
+        <StatiticsComp></StatiticsComp>
         
+<<<<<<< HEAD
             <div className="container estadisticas">
 
                 <div className="text-center">
@@ -44,6 +48,8 @@ const Statitics = () => {
         <NavBarInicio />
         
         </div>
+=======
+>>>>>>> 8de5ff0c60dbb8aa62fd70810d86d1b1261be940
     )
 }
 

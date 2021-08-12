@@ -3,42 +3,37 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const MenuBar = styled.nav`
-  background-color: ${(props) => props.color.neutral};
   width: 100%;
-  height: 60px;
-  bottom: 0px;
-  position: fixed;
-  display: inline-block;
-  z-index: 1;
+  height: 94px;
+  align-items: center;
+  background-color: ${(props) => props.color.neutral};
+  display: flex;
+  justify-content: center;
+  margin-top: -16px;
 
-  @media (min-width: 728px) {
-    width: 100vw;
-    background-color: inherit;
-  }
-
-  @media (min-width: 1028px) {
-    width: 100vw;
-    background-color: inherit;
-  }
 `;
 const Lista = styled.ul`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  width: 500px;
+  background-color: ${(props) => props.color.neutral};
+  justify-content: space-around;
+  padding-left: 3px;
+  height: 75px;
+  align-items: start;
+  margin-bottom: -5px;
+  margin-top: -2px;
+  padding-top: 15px;
+
   li {
+    background-color: #232E35;
+    list-style: none;
     display: flex;
-    align-items: center;
-    width: calc(25% - 15px);
-    padding: 10px;
+    justify-content: space-evenly;
+
     a {
       width: 100%;
       text-transform: capitalize;
       text-decoration: none;
-      color: ${(props) => props.color.white};
       text-align: center;
       box-sizing: border-box;
     }
@@ -48,34 +43,11 @@ const Lista = styled.ul`
   }
 
   @media (min-width: 728px) {
-    width: 420px;
     background-color: ${(props) => props.color.neutral};
-    position: fixed;
-    bottom: 0px;
-    border-top-left-radius: 25%;
-    border-top-right-radius: 25%;
-    left: 50%;
-    margin-left: -210px;
-    z-index: 0;
+    display: flex;
+    align-items: center;
+    flex-flow: row;
 
-    li{
-        background-color: ${(props) => props.color.neutral};
-    }
-  }
-  @media (min-width: 1028px) {
-    width: 500px;
-    background-color: ${(props) => props.color.neutral};
-    position: fixed;
-    top: 0;
-    bottom: initial;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 30%;
-    border-bottom-right-radius: 30%;
-    left: 50%;
-    margin-left: -250px;
-    z-index: 0;
-    
     li{
         background-color: ${(props) => props.color.neutral};
     }
@@ -156,9 +128,9 @@ const NavBarInicio = ({color}) => {
   }
   const ImgProfile = (color) =>{
     if(color === 'profile') {
-      return '../assets/icon-profile-g.png'
+      return './assets/icon-profile-g.png'
     }else{
-      return '../assets/icon-profile-w.png'
+      return './assets/icon-profile-w.png'
     }
   }
 
@@ -173,7 +145,7 @@ const NavBarInicio = ({color}) => {
             </AHome>
           </LiHome>
           <LiStatitics>
-            <AStatitics color={colors} to="/estadisticas">
+            <AStatitics color={colors} to="/Statitics">
               <Icon src={ImgStatitics(color)} alt="icon" />
               <Span>estadisticas</Span>
             </AStatitics>

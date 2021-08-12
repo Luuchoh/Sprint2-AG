@@ -1,6 +1,9 @@
 import React from 'react';
 import Question2Comp from '../components/Question2/Question2Comp';
+<<<<<<< HEAD
 import Button from '../components/Question2/Button';
+=======
+>>>>>>> 8de5ff0c60dbb8aa62fd70810d86d1b1261be940
 
 import styled from "styled-components";
 
@@ -16,7 +19,10 @@ const Question2 = () => {
     return (
         <Question2Div>
             <Question2Comp />
+<<<<<<< HEAD
             <Button />
+=======
+>>>>>>> 8de5ff0c60dbb8aa62fd70810d86d1b1261be940
         </Question2Div>
     )
 }
