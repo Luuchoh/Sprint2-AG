@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
+import RegisterComp from '../components/RegisterComp';
 
 const Register = () => {
     return (
-        <div>
-            
-        </div>
+        <RegisterComp />
     )
 }
 
-export default Register
+export default Register;

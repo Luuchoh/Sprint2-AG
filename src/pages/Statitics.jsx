@@ -1,14 +1,12 @@
 import React from 'react';
-import NavBarInicio from "../components/Navbars/NavBarInicio";
+
+import StatiticsComp from '../components/StatiticsComp';
 
 
 const Statitics = () => {
     return (
-        <div>
-            <NavBarInicio 
-      color={'home'}
-     />
-        </div>
+        <StatiticsComp></StatiticsComp>
+        
     )
 }
 

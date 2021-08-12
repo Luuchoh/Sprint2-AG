@@ -7,36 +7,42 @@ const Main = styled.div`
   width: 90%;
   margin: auto;
   background-color: ${(props) => props.color.black};
-  margin-bottom: 76px;
+  margin-top: -30px;
 
-  @media (min-width: 728px) {
-    width: 80%;
+  @media (min-width: 768px) {
+    width: 90%;
     margin: auto;
+    margin-left: 60px;
     background-color: ${(props) => props.color.black};
     margin-bottom: 76px;
   }
   @media (min-width: 1028px) {
-    width: 70%;
-    margin: auto;
+    width: 90%;
+    margin: 0px auto;
+    margin-left:95px;
     background-color: ${(props) => props.color.black};
-    margin-top: 76px;
+    margin-top: -30px;
   }
 `;
 
 const TitleMain = styled.h5`
-  width: 100%;
-  padding: 16px;
-  font-weight: 600;
-  font-size: 18px;
-  text-align: center;
-  color: ${(props) => props.color.white};
-  box-sizing: border-box;
+
+    width: 95%;
+    padding-top: 40px;
+    font-weight: 600;
+    margin: 0px auto;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 61px;
+    color: ${(props) => props.color.white};
+    box-sizing: border-box;
+
+    
 `;
 const Categories = styled.section`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
+  width: 350px;
+  margin: 0px auto;
+  padding-bottom: 36px;
 `;
 const Section1 = styled.div`
   display: flex;
@@ -69,7 +75,7 @@ const Section3 = styled.div`
   text-align: center;
 `;
 const Language = styled.div`
-  width: calc(47% - 10px);
+  width: calc(50% - 0px); 
 `;
 
 const Span = styled.span`
@@ -108,7 +114,7 @@ const ComponentHome = () => {
         <Section1>
           <Language>
             <ProgressBarCircle color={colors}>
-              <ALink to="/question1">
+              <ALink to="/Question1">
                 <img src="../assets/icon-html.png" alt="ask HTMl" />
               </ALink>
             </ProgressBarCircle>
@@ -118,7 +124,7 @@ const ComponentHome = () => {
         <Section2>
           <Language>
             <ProgressBarCircle color={colors}>
-              <ALink to="/question1">
+              <ALink to="/Home">
                 <img src="../assets/icon-CSS.png" alt="ask CSS" />
               </ALink>
             </ProgressBarCircle>
@@ -127,7 +133,7 @@ const ComponentHome = () => {
 
           <Language>
             <ProgressBarCircle color={colors}>
-              <ALink to="/question1">
+              <ALink to="/Home">
                 <img src="../assets/icon-JS.png" alt="ask JS" />
               </ALink>
             </ProgressBarCircle>
@@ -138,7 +144,7 @@ const ComponentHome = () => {
         <Section3>
           <Language>
             <ProgressBarCircle color={colors}>
-              <ALink to="/question1">
+              <ALink to="/Home">
                 <img src="../assets/icon-figma.png" alt="ask Figma" />
               </ALink>
             </ProgressBarCircle>
@@ -147,7 +153,7 @@ const ComponentHome = () => {
 
           <Language>
             <ProgressBarCircle color={colors}>
-              <ALink to="/question1">
+              <ALink to="/Home">
                 <img src="../assets/icon-UX.png" alt="ask UX" />
               </ALink>
             </ProgressBarCircle>

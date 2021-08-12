@@ -1,35 +1,37 @@
 import React from "react";
 import styled from "styled-components";
+import Button from '../Button';
+import { Link } from "react-router-dom";
 
 // import Button from "./Button";
 
 const QuestionMain = styled.div`
-  width: 90%;
-  margin: auto;
-  background-color: ${(props) => props.color.black};
-  margin-bottom: 76px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+  background-color: #16161A;
 
   @media (min-width: 728px) {
     width: 80%;
     margin: auto;
     background-color: ${(props) => props.color.black};
-    margin-bottom: 76px;
   }
   @media (min-width: 1028px) {
-    width: 70%;
-    margin: auto;
-    background-color: ${(props) => props.color.black};
-    margin-top: 76px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    background-color: #16161A;
+    width: 30%;
   }
 `;
 
 const ContainerQuestion = styled.div`
   background: ${(props) => props.color.black};
-  height: 100vh;
   align-items: center;
   display: flex;
   flex-direction: column;
-  /*padding-bottom: 5%;*/
 `;
 
 const Question4 = styled.div`
@@ -87,10 +89,6 @@ const Option = styled.div`
     color: deeppink;
   }
 `;
-// const Icon = styled.img`
-//   display: inline-block;
-// `;
-// colors
 const colors = {
   negro: "#000000",
   black: "#16161A",
@@ -105,13 +103,18 @@ const colors = {
   tertiary: "#72757E",
 };
 
-const Question2Comp = () => {
+const Question2Comp = ({data}) => {
+
+  console.log('datacomp');
+  const { id, pregunta, opcion1, opcion2, opcion3, opcion4, opcion5} = data;
+
+
   return (
     <QuestionMain color={colors}>
       <ContainerQuestion color={colors}>
         <Question4>
           <TitleMain color={colors}>
-            <h2>Organiza la estructura de un documento HTML5</h2>
+            <h2>{pregunta}</h2>
           </TitleMain>
 
           <Organizar>
@@ -124,34 +127,37 @@ const Question2Comp = () => {
 
           <Options>
             <Option>
-              <a>
-                <code id="code-pregunta4-section1">body&gt &lt/body&gt</code>
-              </a>
+              <Link>
+                <code id="code-pregunta4-section1">{opcion1}</code>
+              </Link>
             </Option>
 
             <Option>
-              <a>
-                <code id="code-pregunta4-section2">&lthead&gt &lt/head&gt</code>
-              </a>
+              <Link>
+                <code id="code-pregunta4-section2">{opcion2}</code>
+              </Link>
             </Option>
 
             <Option>
-              <a>
-                <code id="code-pregunta4-section3">&lthtml&gt</code>
-              </a>
+              <Link>
+                <code id="code-pregunta4-section3">{opcion3}</code>
+              </Link>
             </Option>
             <Option id="html-col">
-              <a>
-                <code id="code-pregunta4-section4">&lt/html&gt</code>
-              </a>
+              <Link>
+                <code id="code-pregunta4-section4">{opcion4}</code>
+              </Link>
             </Option>
             <Option id="html-col">
-              <a>
-                <code id="code-pregunta4-section5">&lt!DOCTYPE html&gt</code>
-              </a>
+              <Link>
+                <code id="code-pregunta4-section5">{opcion5}</code>
+              </Link>
             </Option>
           </Options>
+          <Link to="/Question3"><Button></Button></Link>
+          
         </Question4>
+        
       </ContainerQuestion>
     </QuestionMain>
   );

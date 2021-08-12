@@ -1,14 +1,9 @@
-import React from 'react';
-import NavBarInicio from "../components/Navbars/NavBarInicio";
-
+import React from 'react'
+import ProfileComp from '../components/ProfileComp';
 
 const Profile = () => {
     return (
-        <div>
-<NavBarInicio 
-      color={'home'}
-     />
-        </div>
+        <ProfileComp></ProfileComp>
     )
 }
 
