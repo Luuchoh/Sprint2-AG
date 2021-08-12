@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const MainFooter = styled.div`
     display: inline-block;
     padding: 1rem;
-    background-color: #16161A;/
+    background-color: #16161A;
     background-color: ${(props) => props.color.black};
 
 `;
