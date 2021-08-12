@@ -1,52 +1,25 @@
-<<<<<<< HEAD
 import React from 'react';
 import { 
-    BrowserRouter as Router,
+    BrowserRouter,
     Switch,
     Route,
     Redirect
     } from "react-router-dom";
 
-=======
-
-import { BrowserRouter,Switch,Route , Redirect} from 'react-router-dom'
->>>>>>> 8de5ff0c60dbb8aa62fd70810d86d1b1261be940
 import Home from '../pages/Home';
 import Question1 from '../pages/Question1';
 import Question2 from '../pages/Question2';
 import Profile from '../pages/Profile';
 import Statitics from '../pages/Statitics';
-<<<<<<< HEAD
-
-=======
-//import Navbar from '../pages/Navbar';
-
 import {inicio}  from '../pages/inicio';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Question3 from '../pages/Question3';
-
-import Question1 from '../pages/Question1';
-import Question2 from '../pages/Question2';
 import {PrivateRouter}  from './PrivateRouter';
->>>>>>> 8de5ff0c60dbb8aa62fd70810d86d1b1261be940
 
 
 const DailyBitsRouter = () => {
     return (
-<<<<<<< HEAD
-        <Router>
-            <Switch>
-                
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/question1" component={Question1}/>
-                <Route exact path="/home" component={Question2}/>
-                <Route exact path="/Profile" component={Profile}/>
-                <Route exact path="/estadisticas" component={Statitics}/>
-            </Switch>
-            <Redirect to="/"/>
-        </Router>
-=======
         <BrowserRouter>
             
             <Switch>
@@ -64,10 +37,9 @@ const DailyBitsRouter = () => {
                 <PrivateRouter exact path="/Statitics" component= {Statitics} />
                 <PrivateRouter exact path="/profile" component= {Profile} />
             </Switch>
-            {/*<Redirect to="/"/>*/}
+            <Redirect to="/" />
         </BrowserRouter>  
 
->>>>>>> 8de5ff0c60dbb8aa62fd70810d86d1b1261be940
     )
 }
 

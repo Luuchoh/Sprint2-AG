@@ -1,9 +1,8 @@
 import React from 'react'
-import DailyBitsRouter from '../routers/DailyBitsRouter'
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import logo from '../assets/img/logo.png';
-import estilo from '../style/estilo.css'
+
 
 const ContenedorInicio = styled.div`
     background: #6B47DC;

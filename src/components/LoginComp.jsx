@@ -34,7 +34,7 @@ const LoginComp = () => {
             <Form>
                 
                 <Link className="enlace-Login" to="/Home">
-                    <img src={google}/>
+                    <img src={google} alt="" />
                     Continuar con Google
                 </Link>
                 <hr id="hr-login"></hr>
