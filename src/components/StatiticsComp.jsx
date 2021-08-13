@@ -42,22 +42,22 @@ const StatiticsComp = () => {
                 <Row>
 
                     <div className="col estadistica">
-                        <p></p>
+                        <p>Tiempo de estudio (horas)</p>
                         <div className="estadistica--p"><p></p></div>
                     </div>
 
                     <div className="col estadistica">
-                        <p></p>
+                        <p>Respuestas contestadas</p>
                         <div className="estadistica--p"><p></p></div>
                     </div>
 
                     <div className="col estadistica">
-                        <p></p>
+                        <p>Respuestas correctas</p>
                         <div className="estadistica--p"><p></p></div>
                     </div>
 
                     <div className="col estadistica">
-                        <p></p>
+                        <p>Respuestas incorrectas</p>
                         <div className="estadistica--p"><p></p></div>
                     </div>
                 </Row>

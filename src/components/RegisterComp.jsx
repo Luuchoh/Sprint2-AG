@@ -1,8 +1,9 @@
-import React from 'react'
+import React , {useState} from 'react'
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import logo from '../assets/img/logo-morado.png';
 import '../style/estilo.css'
+import { useForm } from '../hooks/useForm';
 
 const ContenedorLogin = styled.div`
     background: black;
@@ -21,25 +22,39 @@ const Form = styled.div`
     margin: 0px auto;
 `;
 
+
 const RegisterComp = () => {
+    const [values , handleInputChange] = useForm({
+        nombre :'',
+        correo : '',
+        pass : ''
+    })
+
+    const {nombre , correo, pass} = values
+
+    const ver = localStorage.setItem('value', JSON.stringify(values))|| [];
+    console.log(ver);
+    
+    
     return (
         <ContenedorLogin>
+            
             <Imagen>
                 <img src={logo} alt='logo_daily' className="img-Login"/>
             </Imagen>
                 <h1 className="title-login">Registrarse</h1>
             <Form> 
-            
             <p className="p-login">Nombre</p>
-                <input name="text" className="email-login" type="text" placeholder="Introduce tu nombre" required/>
+
+                <input name="nombre" className="email-login" type="text" value={nombre} placeholder="Introduce tu nombre"   onChange={handleInputChange}/>
 
                 <p className="p-login">Correo electrónico</p>
-                <input name="email" className="email-login" type="email" placeholder="Ingresa su correo electrónico" required/>
+                <input name="correo" className="email-login" type="email" value={correo} placeholder="Ingresa su correo electrónico" onChange={handleInputChange}/>
 
                 <p className="p-login">Contraseña</p>
-                <input type="password" className="email-login" name="password" placeholder="Introduce tu contraseña" required/>
+                <input name="pass" type="password" className="email-login" value={pass} placeholder="Introduce tu contraseña" onChange={handleInputChange}/>
                 
-                <Link to="/Login" className="Button-LR">Registrarse</Link>
+                <Link className="Button-LR"  >Registrarse</Link>
             
             </Form>
         </ContenedorLogin>

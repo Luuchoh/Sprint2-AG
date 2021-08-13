@@ -26,6 +26,7 @@ const Form = styled.div`
 
 const LoginComp = () => {
     return (
+        
         <ContenedorLogin>
             <Imagen>
                 <Link to="/"><img src={logo} alt='logo_daily' className="img-Login"/></Link>
@@ -40,10 +41,10 @@ const LoginComp = () => {
                 <hr id="hr-login"></hr>
                 
                 <p className="p-login">Correo electrónico</p>
-                <input name="email" className="email-login" type="email" placeholder="Ingresa su correo electrónico" required/>
+                <input name="email" className="email-login" type="email" placeholder="Ingresa su correo electrónico"/>
                 
                 <p className="p-login">Contraseña</p>
-                <input name="email" className="pass-login" type="email" placeholder="Ingresa su correo electrónico" required/>
+                <input name="email" className="pass-login" type="email" placeholder="Ingresa su correo electrónico"/>
 
                 <Link to="/Home" className="Button-LR">Iniciar sesión</Link>
                 

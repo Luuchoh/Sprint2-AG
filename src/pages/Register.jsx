@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import RegisterComp from '../components/RegisterComp';
 
 const Register = () => {
+   
+
     return (
-        <RegisterComp />
+
+        <RegisterComp/>
+      
     )
 }
 
