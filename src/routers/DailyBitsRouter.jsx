@@ -1,5 +1,8 @@
+import React from 'react';
 import { BrowserRouter,Switch,Route , Redirect} from 'react-router-dom'
 import Home from '../pages/Home';
+import Question1 from '../pages/Question1';
+import Question2 from '../pages/Question2';
 import Profile from '../pages/Profile';
 import Statitics from '../pages/Statitics';
 
@@ -8,10 +11,7 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Question3 from '../pages/Question3';
 
-import Question1 from '../pages/Question1';
-import Question2 from '../pages/Question2';
 import {PrivateRouter}  from './PrivateRouter';
-
 
 
 const DailyBitsRouter = () => {
@@ -34,7 +34,7 @@ const DailyBitsRouter = () => {
                 <PrivateRouter exact path="/Statitics" component= {Statitics} />
                 <PrivateRouter exact path="/profile" component= {Profile} />
             </Switch>
-            {<Redirect to="/"/>}
+            <Redirect to="/"/>
         </BrowserRouter>  
 
     )

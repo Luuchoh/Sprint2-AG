@@ -72,7 +72,7 @@ const Question1Comp = ({id}) => {
                     </label>
 
                 <div className="mostrar"></div>
-                <Link to="/Question3" ><Button></Button></Link>
+                <Link to="/Question2" ><Button></Button></Link>
 
                 </div>
             </div>

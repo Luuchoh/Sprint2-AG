@@ -339,7 +339,7 @@ color: #FFFFFE;
 }
 /******************************/
 /*AFTER DE PREGUNTAS 4*/
-#code-pregunta4-section1::after{
+/* #code-pregunta4-section1::after{
     content:"<!DOCTYPE html>"
 }
 #code-pregunta4-section2::after{
@@ -360,7 +360,7 @@ color: #FFFFFE;
 
 .container.pregunta4.row{
     margin-right: calc(var(--bs-gutter-x) * -0.5);
-}
+} */
 
 /*********** ALERT *************/
 .alert {

@@ -17,7 +17,6 @@ const QuestionMain = styled.div`
     width: 80%;
     margin: auto;
     background-color: ${(props) => props.color.black};
-    margin-bottom: 76px;
   }
   @media (min-width: 1028px) {
     width: 60%;
@@ -34,7 +33,6 @@ const ContainerQuestion = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  /*padding-bottom: 5%;*/
 `;
 
 const Question4 = styled.div`
@@ -92,10 +90,6 @@ const Option = styled.div`
     color: deeppink;
   }
 `;
-// const Icon = styled.img`
-//   display: inline-block;
-// `;
-// colors
 const colors = {
   negro: "#000000",
   black: "#16161A",
@@ -110,14 +104,18 @@ const colors = {
   tertiary: "#72757E",
 };
 
-const Question2Comp = () => {
+const Question2Comp = ({data}) => {
+
+  const { pregunta, opcion1, opcion2, opcion3, opcion4, opcion5} = data;
+
+
   return (
     <QuestionMain color={colors}>
       <ContainerQuestion color={colors}>
         <Question4>
           <ProgressBar />
           <TitleMain color={colors}>
-            <h2>Organiza la estructura de un documento HTML5</h2>
+            <h2>{pregunta}</h2>
           </TitleMain>
 
           <Organizar>
@@ -131,29 +129,29 @@ const Question2Comp = () => {
           <Options>
             <Option>
               <Link>
-                <code id="code-pregunta4-section1">body&gt &lt/body&gt</code>
+                <code id="code-pregunta4-section1">{opcion1}</code>
               </Link>
             </Option>
 
             <Option>
               <Link>
-                <code id="code-pregunta4-section2">&lthead&gt &lt/head&gt</code>
+                <code id="code-pregunta4-section2">{opcion2}</code>
               </Link>
             </Option>
 
             <Option>
               <Link>
-                <code id="code-pregunta4-section3">lthtmlgt</code>
+                <code id="code-pregunta4-section3">{opcion3}</code>
               </Link>
             </Option>
             <Option id="html-col">
               <Link>
-                <code id="code-pregunta4-section4">lt/htmlgt</code>
+                <code id="code-pregunta4-section4">{opcion4}</code>
               </Link>
             </Option>
             <Option id="html-col">
               <Link>
-                <code id="code-pregunta4-section5">lt!DOCTYPE htmlgt</code>
+                <code id="code-pregunta4-section5">{opcion5}</code>
               </Link>
             </Option>
           </Options>
