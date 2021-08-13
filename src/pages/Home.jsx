@@ -1,15 +1,8 @@
 import React from "react";
 import NavBarInicio from "../components/Navbars/NavBarInicio";
-import ComponentHome from "../components/ComponentHome";
-import styled from "styled-components";
+import ComponentHome from "../components/HomeComp";
+import { HomeDiv } from "../style/Home-styles";
 
-const HomeDiv = styled.div`
-    margin: -30px;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #16161A;
-    color: #FFFFFE;
-`;
 
 const Home = () => {
   return (

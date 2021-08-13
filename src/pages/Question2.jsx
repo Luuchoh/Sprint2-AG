@@ -3,15 +3,8 @@ import axios from 'axios';
 
 import Question2Comp from '../components/Question2/Question2Comp';
 
-import styled from "styled-components";
+import { Question2Div } from "../style/Question2-styles";
 
-const Question2Div = styled.div`
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #16161A;
-  color: #FFFFFE;
-`;
 
 const Question2 = () => {
 
