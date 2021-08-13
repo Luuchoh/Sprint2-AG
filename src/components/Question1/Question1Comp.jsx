@@ -51,7 +51,7 @@ const Question1Comp = ({id}) => {
                   </BarraP>
 
                 <div className="container_questionHTML">
-                        <img src={pregunta.imag}/>
+                        <img src={pregunta.imag} alt="" />
                         <p>¿Qué etiqueta es semánticamente correcta para el contenido principal?</p>
                         
                 </div>
