@@ -114,21 +114,21 @@ const NavBarInicio = ({color}) => {
 
 
   const ImgHome = (color) =>{
-    if(color == 'home') {
+    if(color === 'Home') {
       return './assets/icon-home-g.png'
     }else{
       return './assets/icon-home-w.png'
     }
   }
   const ImgStatitics = (color) =>{
-    if(color == 'statitics') {
+    if(color === 'Statitics') {
       return './assets/icon-statitics-g.png'
     }else{
       return './assets/icon-statitics-w.png'
     }
   }
   const ImgProfile = (color) =>{
-    if(color == 'profile') {
+    if(color === 'profile') {
       return './assets/icon-profile-g.png'
     }else{
       return './assets/icon-profile-w.png'

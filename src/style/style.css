@@ -144,10 +144,9 @@ p.answer::after{
 .container_questionHTML {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
-    flex-wrap: wrap;
+    margin-top: 59px;
     margin-left: -20px;
-    align-items: center;
+    align-items: inherit;
 }
 
 /*********PREGUNTA UNO***********/

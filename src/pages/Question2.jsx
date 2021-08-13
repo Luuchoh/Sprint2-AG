@@ -14,7 +14,7 @@ const Question2Div = styled.div`
 const Question2 = () => {
     return (
         <Question2Div>
-            <Question2Comp />
+            <Question2Comp id="2"/>
         </Question2Div>
     )
 }

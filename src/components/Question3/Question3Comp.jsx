@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState }  from 'react'
 import { Link } from 'react-router-dom';
+import axios from "axios";
 import  Button  from '../Button';
 import styled from "styled-components";
 
@@ -11,30 +12,53 @@ const ContenedorLogin = styled.div`
 `;
 
 const QuestionTecnologias = styled.div`
-color: white;
-margin-left: -125px;
+    color: white;
+    margin-left: -70px;
 `;
 
-const Question3Comp = () => {
+const Question3Comp = ({id}) => {
+
+    const[pregunta , setPregunta] = useState([]);
+    
+    
+    useEffect(() => {
+        obtenerDatos()
+    },[])
+
+    const obtenerDatos = async() =>{
+        const url =`https://dailybits.herokuapp.com/options/${id}`
+        const resp  = await axios.get(url);
+        const data = await resp.data
+        setPregunta(data);
+        console.log(data);
+        return data
+    }
+    console.log(pregunta.seleccion1)
+
+
     return (
         <ContenedorLogin>
 
-            <p className="title-Pregunta">¿Qué tecnologías pertenece al MEVN Stack?</p>
+            <p className="title-Pregunta">{pregunta.pregunta}</p>
             <QuestionTecnologias>
 
                 <ul className="ul-Question5Html">
                     <li>
+                        <img  className="img-Question3"  src={pregunta.seleccion1}/>
                         <p>Angular</p>
                     </li>
                     <li>
+                    <img className="img-Question3" src={pregunta.seleccion2} />
                         <p>Vue.js</p>
                     </li>
                 </ul>
                 <ul className="ul-Question5Html">
                     <li>
+                    <img  className="img-Question3" src={pregunta.seleccion4} />
                         <p>Window</p>
                     </li>
                     <li>
+                    <img className="img-Question3" src={pregunta.seleccion3} />
                         <p>Kotlin</p>
                     </li>
                 </ul>
