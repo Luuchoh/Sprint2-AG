@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import logo from '../assets/img/logo.png';
-import '../style/estilo.css'
 
 const ContenedorInicio = styled.div`
     background: #6B47DC;

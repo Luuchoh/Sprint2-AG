@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from '../Button';
+import ProgressBar from "../ProgressBar";
 import { Link } from "react-router-dom";
 
 // import Button from "./Button";
@@ -113,6 +114,7 @@ const Question2Comp = ({data}) => {
     <QuestionMain color={colors}>
       <ContainerQuestion color={colors}>
         <Question4>
+          <ProgressBar />
           <TitleMain color={colors}>
             <h2>{pregunta}</h2>
           </TitleMain>
