@@ -124,7 +124,7 @@ const ComponentHome = () => {
         <Section2>
           <Language>
             <ProgressBarCircle color={colors}>
-              <ALink to="/Home">
+              <ALink to="/Css">
                 <img src="../assets/icon-CSS.png" alt="ask CSS" />
               </ALink>
             </ProgressBarCircle>

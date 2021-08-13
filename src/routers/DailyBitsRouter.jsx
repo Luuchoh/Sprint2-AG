@@ -2,7 +2,6 @@ import { BrowserRouter,Switch,Route , Redirect} from 'react-router-dom'
 import Home from '../pages/Home';
 import Profile from '../pages/Profile';
 import Statitics from '../pages/Statitics';
-//import Navbar from '../pages/Navbar';
 
 import {inicio}  from '../pages/inicio';
 import Login from '../pages/Login';
@@ -12,6 +11,7 @@ import Question3 from '../pages/Question3';
 import Question1 from '../pages/Question1';
 import Question2 from '../pages/Question2';
 import {PrivateRouter}  from './PrivateRouter';
+import CategoryCss from '../pages/CategoryCss';
 
 
 const DailyBitsRouter = () => {
@@ -24,6 +24,7 @@ const DailyBitsRouter = () => {
                 <Route exact={true} path="/Register" component={Register}/>
  
                 <PrivateRouter exact path="/Home" component= {Home} />
+                <PrivateRouter exact path="/Css" component= {CategoryCss} />
                 <PrivateRouter exact path="/Question1" component={Question1}/>
                 <PrivateRouter exact path="/Question2" component={Question2}/>
                 <PrivateRouter exact path="/Question3" component={Question3}/>

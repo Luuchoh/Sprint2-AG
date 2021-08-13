@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const MainFooter = styled.div`
     display: inline-block;
-    padding: 1rem;
+    padding: 0;
     background-color: #16161A;
     background-color: ${(props) => props.color.black};
 

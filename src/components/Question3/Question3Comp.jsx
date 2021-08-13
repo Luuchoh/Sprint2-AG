@@ -1,24 +1,31 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import  Button  from '../Button';
+import ProgressBar from '../ProgressBar';
 import styled from "styled-components";
 
 const ContenedorLogin = styled.div`
     background: #16161A;
     align-items: center;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 `;
 
 const QuestionTecnologias = styled.div`
-color: white;
-margin-left: -125px;
+    color: white;
+    margin-left: -130px;
 `;
+
+const Header = styled.div`
+    width: 90%;
+`
 
 const Question3Comp = () => {
     return (
         <ContenedorLogin>
 
+            <Header><ProgressBar /></Header>
+            
             <p className="title-Pregunta">¿Qué tecnologías pertenece al MEVN Stack?</p>
             <QuestionTecnologias>
 

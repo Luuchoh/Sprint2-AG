@@ -1,25 +1,34 @@
 import React from 'react'
 import Button from '../Button';
 import { Link } from "react-router-dom";
-//import style from '../style/style.css'
+import ProgressBar from '../ProgressBar';
+import styled from 'styled-components';
+
+const BarraP = styled.div`
+    width: 100%;
+`
+const Progress = styled.div`
+width: 320px;
+`
 
 const Question1Comp = () => {
     return (
 
         <div className="questionHTML">
+            
                 
                 <div className="questionsOne">  
-                  <header className="header__questionHTML">
-                    <a href="/" id="irHome">
-                    
-                    </a>
+                  <BarraP>
+                    <Link to="/" id="irHome"></Link>
 
                 <div className="progress">
-                    <div id="barra" className="progress-bar animacion" role="progressbar"></div>
+                    <Progress id="barra" className="progress-bar animacion" role="progressbar">
+                        <ProgressBar />
+                    </Progress>
                     </div>
                         
                     <div id="contador"></div>
-                  </header>
+                  </BarraP>
 
                 <div className="container_questionHTML">
                         

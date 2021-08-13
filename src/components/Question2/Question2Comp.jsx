@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from '../Button';
+import ProgressBar from "../ProgressBar";
 import { Link } from "react-router-dom";
 
 // import Button from "./Button";
@@ -114,6 +115,7 @@ const Question2Comp = () => {
     <QuestionMain color={colors}>
       <ContainerQuestion color={colors}>
         <Question4>
+          <ProgressBar />
           <TitleMain color={colors}>
             <h2>Organiza la estructura de un documento HTML5</h2>
           </TitleMain>
