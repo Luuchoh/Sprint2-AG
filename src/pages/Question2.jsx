@@ -1,40 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { Fragment, useEffect, useState } from "react";
+import axios from "axios";
 
-import Question2Comp from '../components/Question2/Question2Comp';
+import Question2Comp from "../components/Question2/Question2Comp";
 
 import { Question2Div } from "../style/Question2-styles";
 
-
 const Question2 = () => {
+  const [categoria, setCategoria] = useState("");
 
-    const [categoria, setCategoria] = useState('');
+  useEffect(() => {
+    const pregunta = async () => {
+      try {
+        const { data } = await axios.get(
+          `http://dailybits.herokuapp.com/selecc`
+        );
+        setCategoria(data[0]);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    pregunta();
+  }, []);
 
-    useEffect(() => {
+  return (
+    <Fragment>
+      <Question2Div>
+        <Question2Comp data={categoria} />
+      </Question2Div>
+    </Fragment>
+  );
+};
 
-        const pregunta = async () =>{
-
-            try {
-                const { data } = await axios.get(
-                    `http://dailybits.herokuapp.com/selecc`
-                )
-                setCategoria(data[0]);
-            } catch (error) {
-                console.error(error)
-            }
-        }
-        pregunta();
-
-    }, [])
-
-    
-    return (
-        <Question2Div>
-            <Question2Comp 
-                data={categoria}
-            />
-        </Question2Div>
-    )
-}
-
-export default Question2
+export default Question2;
