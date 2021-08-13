@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React  from 'react'
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import logo from '../assets/img/logo-morado.png';
@@ -42,7 +42,7 @@ const RegisterComp = () => {
             <Imagen>
                 <img src={logo} alt='logo_daily' className="img-Login"/>
             </Imagen>
-                <h1 className="title-login">Registrarse</h1>
+                <h1 className="title-login">Registrarte</h1>
             <Form> 
             <p className="p-login">Nombre</p>
 
@@ -54,7 +54,7 @@ const RegisterComp = () => {
                 <p className="p-login">Contraseña</p>
                 <input name="pass" type="password" className="email-login" value={pass} placeholder="Introduce tu contraseña" onChange={handleInputChange}/>
                 
-                <Link className="Button-LR"  >Registrarse</Link>
+                <Link className="Button-LR">Registrar</Link>
             
             </Form>
         </ContenedorLogin>

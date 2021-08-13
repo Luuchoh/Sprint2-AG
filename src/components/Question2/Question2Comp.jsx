@@ -106,8 +106,7 @@ const colors = {
 
 const Question2Comp = ({data}) => {
 
-  console.log('datacomp');
-  const { id, pregunta, opcion1, opcion2, opcion3, opcion4, opcion5} = data;
+  const { pregunta, opcion1, opcion2, opcion3, opcion4, opcion5} = data;
 
 
   return (

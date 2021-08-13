@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '../style/style.css'
-import NavBarInicio from "../components/Navbars/NavBarInicio";
 
 const ProfileComp = () => {
     return (
@@ -18,7 +17,6 @@ const ProfileComp = () => {
                 <Link to="/Login"><strong>Cerrar sesión</strong></Link>
             </div>
         </div>
-        <NavBarInicio></NavBarInicio>
         </div>
     )
 }

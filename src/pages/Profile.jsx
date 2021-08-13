@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import NavBarInicio from '../components/Navbars/NavBarInicio';
 import ProfileComp from '../components/ProfileComp';
 
 const Profile = () => {
     return (
-        <ProfileComp></ProfileComp>
+        <Fragment>
+        <ProfileComp />
+        <NavBarInicio color={'profile'}/>
+        </Fragment>
     )
 }
 
