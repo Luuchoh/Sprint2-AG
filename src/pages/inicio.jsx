@@ -1,34 +1,25 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import logo from '../assets/img/logo.png';
 
-const ContenedorInicio = styled.div`
-    background: #6B47DC;
-    height: 657px;
-`;
-
-const Image = styled.div`
-    margin-top: 300px;  
-    transition-duration: 8s;
-
-`;
-
 const Inicio = styled.div`
+    background: #6B47DC;
+    height: 100vh;
     display: flex;
     justify-content: center; 
+    align-items:center;
 `;
+
 
 export const inicio = () => {
     return (
-            <ContenedorInicio>
+            <Fragment>
                 <Inicio>
-                <Link to="/Login">
-                    <Image>
+                    <Link to="/Login">
                         <img src={logo} alt="logo_daily"/>
-                    </Image>
-                </Link>
+                    </Link>
                 </Inicio>
-            </ContenedorInicio>
+            </Fragment>
     )
 }
