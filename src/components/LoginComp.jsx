@@ -8,6 +8,10 @@ import '../style/estilo.css'
 const ContenedorLogin = styled.div`
     background: black;
     height: auto;
+    
+    @media (min-width: 375px)  and (max-width: 812px){
+       height:810px
+    }
 `;
 
 const Imagen = styled.div`

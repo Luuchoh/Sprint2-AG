@@ -33,6 +33,7 @@ const RegisterComp = () => {
     const {nombre , correo, pass} = values
 
     const ver = localStorage.setItem('value', JSON.stringify(values))|| [];
+    ver.push(values)
     console.log(ver);
     
     

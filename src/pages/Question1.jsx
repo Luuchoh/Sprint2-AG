@@ -5,12 +5,11 @@ import '../style/style.css'
 
 const Question1 = () => {
     
-    const id = useParams();
 
     return (
 
         
-        <Question1Comp id='1'></Question1Comp>
+        <Question1Comp></Question1Comp>
         
 
     )

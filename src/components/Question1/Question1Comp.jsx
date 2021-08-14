@@ -4,31 +4,40 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 
-const Question1Comp = ({id}) => {
+const Question1Comp = () => {
 
     
     const[pregunta , setPregunta] = useState([]);
+    const [cambiar , setCambio] = useState(1);
     
+    console.log(cambiar)
+    /*const nextQuestion= () => {
+        setCambio(cambiar+1);
+        setCambio = {id}
+    };
+
+    console.log(pregunta)
+    console.log(cambiar+1)
+    console.log(setCambio.cambiar)*/
 
     useEffect(() => {
         obtenerDatos()
     },[])
 
     const obtenerDatos = async() =>{
-        const url =`https://dailybits.herokuapp.com/questionHtml/${id}`
+        const url =`https://dailybits.herokuapp.com/questionHtml/${cambiar}`
         const resp  = await axios.get(url);
         const data = await resp.data
         setPregunta(data);
-        console.log(data);
+        //console.log(data);
         return data
     }
 
-
     return (
-
         
-        <div className="questionHTML">
 
+        <div className="questionHTML">
+            
                 <div className="questionsOne">  
  
                   <header className="header__questionHTML">
@@ -64,13 +73,13 @@ const Question1Comp = ({id}) => {
                         <input name="input-radio" value="header" type="radio" className="input-radio" />
                     </label>
 
-                <div className="mostrar"></div>
-                <Link to="/Question3" ><Button></Button></Link>
+                
+                <Link onClick={() => setCambio(+(cambiar+1))}><Button></Button></Link>
 
                 </div>
             </div>
             
-        </div>
+        </div>//FIN
         
     )
     
