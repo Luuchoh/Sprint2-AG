@@ -1,37 +1,39 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
-import styled from "styled-components";
 import axios from "axios";
 import md5 from "md5";
 import Swal from "sweetalert2";
+import { useHistory } from "react-router-dom";
 
-import { useForm } from "../hooks/useForm";
+
 import logo from "../assets/img/logo-morado.png";
 import google from "../assets/img/icon-google.png";
-import "../style/estilo.css";
+import { useForm } from "../hooks/useForm";
+import { 
+  ContenedorLR,
+  ContainerImagen,
+  Imagen,
+  Title,
+  Form,
+  LinkGoogle,
+  Logo,
+  Hr,
+  Label,
+  Input,
+  Button,
+  LinkPass,
+  ContainerUser,
+  P,
+  LinkReg
+ } from "../style/Login-Register-styles";
 
-const ContenedorLogin = styled.div`
-  background: black;
-  height: auto;
-`;
 
-const Imagen = styled.div`
-  display: flex;
-  justify-content: center;
-`;
 
-const Form = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 320px;
-  margin: 0px auto;
-`;
 
 const LoginComp = () => {
   //Hook historial
   const history = useHistory();
   //Hook customizado
-  const [values, handleInputChange, handleFileChange, handleClickFile] =
+  const [values, handleInputChange] =
     useForm({
       email: "",
       password: "",
@@ -42,7 +44,7 @@ const LoginComp = () => {
   const validatorUser = async () => {
     try {
       const url = `http://dailybits.herokuapp.com/users`;
-      const confirm = await axios
+      await axios
         .get(url, {
           params: {
             email: email,
@@ -54,22 +56,22 @@ const LoginComp = () => {
             let resp = res.data;
             console.log(resp);
             if (resp.length > 0) {
-              let {name} =resp[0];
+              let { name } = resp[0];
               Swal.fire({
-                icon: 'success',
-                title: 'Bienvenido',
+                icon: "success",
+                title: "Bienvenido",
                 text: `${name}`,
-                timer: 2000
-              })
+                timer: 2000,
+              });
               setTimeout(() => {
                 history.push("/Home");
               }, 2000);
             } else {
               Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'usuario o contraseña incorrectos',
-              })
+                icon: "error",
+                title: "Oops...",
+                text: "usuario o contraseña incorrectos",
+              });
             }
           } else {
             console.log("Servidor caido");
@@ -82,57 +84,48 @@ const LoginComp = () => {
   };
 
   return (
-    <ContenedorLogin>
-      <Imagen>
-        <Link to="/">
-          <img src={logo} alt="logo_daily" className="img-Login" />
-        </Link>
-      </Imagen>
-      <h1 className="title-login">Iniciar Sesión</h1>
+    <ContenedorLR>
+      <ContainerImagen>
+        <Imagen src={logo} alt="logo_daily" />
+      </ContainerImagen>
+      <Title>Inicia sesión</Title>
       <Form>
-        <Link className="enlace-Login" to="/Home">
-          <img src={google} alt="" />
-          Continuar con Google
-        </Link>
-        <hr id="hr-login"></hr>
+        <LinkGoogle to="/Home">
+          <Logo src={google} alt="" />
+          <span>Continuar con Google</span>
+        </LinkGoogle>
+        <Hr></Hr>
 
-        <label htmlFor="email" className="p-login">
-          Correo electrónico
-        </label>
-        <input
+        <Label htmlFor="email">Correo electrónico</Label>
+        <Input
           name="email"
-          className="email-login"
           type="email"
           id="email"
           placeholder="Ingresa su correo electrónico"
           onChange={handleInputChange}
         />
 
-        <label htmlFor="password" className="p-login">
-          Contraseña
-        </label>
-        <input
+        <Label htmlFor="password">Contraseña</Label>
+        <Input
           name="password"
-          className="pass-login"
           type="password"
           id="password"
           placeholder="Ingresa su correo electrónico"
           onChange={handleInputChange}
         />
 
-        <button className="Button-LR" onClick={validatorUser}>
-          Iniciar sesión
-        </button>
+        <Button onClick={validatorUser}>Iniciar sesión</Button>
 
-        <Link className="enlace-pass">¿Se te olvidó tu contraseña?</Link>
-        <p className="p-enlace">
-          ¿Aún no tienes cuenta?
-          <Link className="enlace-inscribirse" to="/register">
+        <LinkPass>¿Se te olvidó tu contraseña?</LinkPass>
+
+        <ContainerUser>
+          <P>¿Aún no tienes cuenta?</P>
+          <LinkReg to="/register">
             Inscribite
-          </Link>
-        </p>
+          </LinkReg>
+        </ContainerUser>
       </Form>
-    </ContenedorLogin>
+    </ContenedorLR>
   );
 };
 

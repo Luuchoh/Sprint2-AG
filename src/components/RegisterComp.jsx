@@ -1,30 +1,27 @@
 import React from "react";
-import styled from "styled-components";
 import axios from "axios";
 import md5 from "md5";
 import uuid from "react-uuid";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import logo from "../assets/img/logo-morado.png";
 import "../style/estilo.css";
 import { useForm } from "../hooks/useForm";
-
-const ContenedorLogin = styled.div`
-  background: black;
-  height: 657px;
-`;
-
-const Imagen = styled.div`
-  display: flex;
-  justify-content: center;
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-wrap: wrap;
-  width: 320px;
-  margin: 0px auto;
-`;
+import {
+  ContenedorLR,
+  ContainerImagen,
+  Imagen,
+  Title,
+  Form,
+  Label,
+  Input,
+  ContainerFile,
+  ButtonFile,
+  Button,
+  ContainerUser,
+  P,
+  LinkReg,
+} from "../style/Login-Register-styles";
 
 const RegisterComp = () => {
   //hook historial
@@ -44,27 +41,25 @@ const RegisterComp = () => {
   const insertUser = async () => {
     try {
       const url = `http://dailybits.herokuapp.com/users`;
-      const confirm = await axios
-        .post(url, {
-          id: uuid(),
-          name: nombre,
-          email: correo,
-          password: md5(pass),
-          avatar: urlImage,
-          statitics: [
-            {
-              timeHours: 0,
-              constrainedQuestions: 0,
-              CorrectQuestions: 0,
-              IncorrectQuestion: 0,
-            },
-          ],
-        })
-        
-        if (confirm.status === 201) {
+      const confirm = await axios.post(url, {
+        id: uuid(),
+        name: nombre,
+        email: correo,
+        password: md5(pass),
+        avatar: urlImage,
+        statitics: [
+          {
+            timeHours: 0,
+            constrainedQuestions: 0,
+            CorrectQuestions: 0,
+            IncorrectQuestion: 0,
+          },
+        ],
+      });
+
+      if (confirm.status === 201) {
         history.push("/login");
-        }
-        
+      }
     } catch (error) {
       console.error(error);
     }
@@ -76,41 +71,38 @@ const RegisterComp = () => {
   };
 
   return (
-    <ContenedorLogin>
-      <Imagen>
-        <img src={logo} alt="logo_daily" className="img-Login" />
-      </Imagen>
-      <h1 className="title-login">Registrarte</h1>
+    <ContenedorLR>
+      <ContainerImagen>
+        <Imagen src={logo} alt="logo_daily" />
+      </ContainerImagen>
+      <Title>Registrarte</Title>
       <Form onSubmit={handleSubmit}>
-        <p className="p-login">Nombre</p>
-        <input
+        <Label>Nombre</Label>
+        <Input
           name="nombre"
-          className="email-login"
           type="text"
           value={nombre}
           placeholder="Introduce tu nombre"
           onChange={handleInputChange}
         />
-        <p className="p-login">Correo electrónico</p>
-        <input
+        <Label>Correo electrónico</Label>
+        <Input
           name="correo"
-          className="email-login"
           type="email"
           value={correo}
           placeholder="Ingresa su correo electrónico"
           onChange={handleInputChange}
         />
-        <p className="p-login">Contraseña</p>
-        <input
+        <Label>Contraseña</Label>
+        <Input
           name="pass"
           type="password"
-          className="email-login"
           value={pass}
           placeholder="Introduce tu contraseña"
           onChange={handleInputChange}
         />
-        <p className="p-login">Contraseña</p>
-        <input
+        <Label>Imagen de perfil</Label>
+        <Input
           accept="image/*"
           type="file"
           name="file"
@@ -118,20 +110,18 @@ const RegisterComp = () => {
           onChange={handleFileChange}
           style={{ display: "none" }}
         />
-        <button onClick={handleClickFile}>Select image</button>
-        <input
-          className="email-login"
-          type="text"
-          name="urlImage"
-          id="urlImage"
-          disabled
-        />
-        onChange={handleFileChange}
-        <Link className="Button-LR" onClick={insertUser}>
-          Registrar
-        </Link>
+        <ContainerFile>
+          <ButtonFile onClick={handleClickFile}>Select image</ButtonFile>
+        </ContainerFile>
+        <Input type="text" name="urlImage" id="urlImage" disabled />
+
+        <Button onClick={insertUser}>Iniciar sesión</Button>
+        <ContainerUser>
+          <P>¿Ya tienes cuenta?</P>
+          <LinkReg to="/Login">Inicia sesión</LinkReg>
+        </ContainerUser>
       </Form>
-    </ContenedorLogin>
+    </ContenedorLR>
   );
 };
 
