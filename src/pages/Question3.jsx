@@ -5,7 +5,7 @@ import Question3Comp from '../components/Question3/Question3Comp';
 const Question3 = () => {
     const id = useParams();
     return (
-        <Question3Comp id='5' />
+        <Question3Comp id='5'/>
     )
 }
 
