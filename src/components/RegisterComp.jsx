@@ -70,7 +70,7 @@ const RegisterComp = () => {
     }
   };
 
-  //
+  //Quita la action por defecto del formulario
   const handleSubmit = (e) => {
     e.preventDefault();
   };
