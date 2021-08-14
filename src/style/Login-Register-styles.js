@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const ContenedorPadre = styled.div`
   width:100%;
   background: black;
-  backgroun-size: cover;
+  background-size: cover;
 `;
 export const ContenedorLR = styled.div`
   background: black;
