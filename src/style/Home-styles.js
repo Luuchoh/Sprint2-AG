@@ -16,17 +16,12 @@ export const Main = styled.div`
   margin-bottom: 75px;
 
   @media (min-width: 768px) {
-    width: 90%;
+    width: 60%;
     margin: auto;
-    margin-left: 60px;
-    background-color: ${(props) => props.color.black};
-    margin-bottom: 76px;
   }
   @media (min-width: 1028px) {
-    width: 90%;
+    width: 30%;
     margin: 0px auto;
-    margin-left: 95px;
-    background-color: ${(props) => props.color.black};
   }
 `;
 

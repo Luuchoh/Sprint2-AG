@@ -82,6 +82,10 @@ export const Input = styled.input`
   border-radius: 4px;
   color: black;
   padding: 15px;
+
+  &:disabled{
+    background-color: #fff;
+  }
 `;
 export const ContainerFile = styled.div`
   width: 100%;

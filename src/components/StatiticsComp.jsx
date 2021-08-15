@@ -1,76 +1,87 @@
-import React from 'react';
-import '../style/style.css'
-import NavBarInicio from "../components/Navbars/NavBarInicio";
-import styled from 'styled-components';
-// import {
-    //    TimeFive
-//     MessageRounded
-// } from '@styled-icons/boxicons-regular'
+import React from "react";
+import "../style/style.css";
 
-const Principal = styled.div`
-    background: #16161A;
-    width: 100%;
-    height: 586px;
-`
-const Contenedor = styled.div`
-    background: #16161A;
-    width: 100%;
-    height: 585px;
-    display:flex; justify-content:center;
-
-    
-`
-const Estadisticas = styled.div`
-    width:90%;
-`
-const H2 = styled.div`
-    margin-bottom:70px;
-    color: white; 
-`
-const Row = styled.div`
-width: 90%;
-`
-
+import {
+  Principal,
+  Estadisticas,
+  H2,
+  Row,
+  ContainerForm,
+  Form,
+  Select,
+  Option,
+  ContainerEstadistica,
+  Time,
+  Message,
+  Text,
+  Estadistica,
+  EstadisticaCorrect,
+  EstadisticaIncorrect
+} from "../style/Statitics-styles";
+import { Colors } from "../style/Colors";
 
 const StatiticsComp = () => {
-    return (
-        <Principal>
-        <Contenedor>
+  return (
+    <Principal>
+      <Estadisticas>
+        <H2>
+          <h2>Estadísticas</h2>
+        </H2>
 
-            <Estadisticas>
+        <ContainerForm>
+          <Form>
+            <Select color={Colors.white}>
+              <Option color={Colors} value="7">
+                Los últimos 7 días
+              </Option>
+              <Option color={Colors} value="14">
+                Los últimos 14 días
+              </Option>
+              <Option color={Colors} value="30">
+                El último mes
+              </Option>
+            </Select>
+          </Form>
+        </ContainerForm>
 
-                <H2>
-                    <h2>Estadísticas</h2>
-                </H2>
+        <Row>
+          <ContainerEstadistica>
+            <Time color={Colors.Negro} />
+            <Text>Tiempo de estudio (horas)</Text>
+            <Estadistica>
+              <Text>0</Text>
+            </Estadistica>
+          </ContainerEstadistica>
 
-                <Row>
+          <ContainerEstadistica>
+            <Message color={Colors.Negro} />
+            <Text>Respuestas contestadas</Text>
+            <Estadistica>
+              <Text>4</Text>
+            </Estadistica>
+          </ContainerEstadistica>
 
-                    <div className="col estadistica">
-                        <p>Tiempo de estudio (horas)</p>
-                        <div className="estadistica--p"><p></p></div>
-                    </div>
+          <ContainerEstadistica>
+            <Message color={Colors.Negro} />
 
-                    <div className="col estadistica">
-                        <p>Respuestas contestadas</p>
-                        <div className="estadistica--p"><p></p></div>
-                    </div>
+            <Text>Respuestas correctas</Text>
+            <EstadisticaCorrect color={Colors.green}>
+              <span>3</span>
+            </EstadisticaCorrect>
+          </ContainerEstadistica>
 
-                    <div className="col estadistica">
-                        <p>Respuestas correctas</p>
-                        <div className="estadistica--p"><p></p></div>
-                    </div>
+          <ContainerEstadistica>
+            <Message color={Colors.Negro} />
 
-                    <div className="col estadistica">
-                        <p>Respuestas incorrectas</p>
-                        <div className="estadistica--p"><p></p></div>
-                    </div>
-                </Row>
-            </Estadisticas>
-            
-        </Contenedor>
-        <NavBarInicio></NavBarInicio>
-        </Principal>
-    )
-}
+            <Text>Respuestas incorrectas</Text>
+            <EstadisticaIncorrect color={Colors.red}>
+              <span>1</span>
+            </EstadisticaIncorrect>
+          </ContainerEstadistica>
+        </Row>
+      </Estadisticas>
+    </Principal>
+  );
+};
 
-export default StatiticsComp
+export default StatiticsComp;

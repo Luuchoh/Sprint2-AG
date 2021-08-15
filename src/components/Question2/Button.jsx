@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const MainFooter = styled.div`
   width: 100vw;
@@ -129,14 +128,6 @@ const MessageP = styled.p`
   color: ${(props) => props.color.black};
   margin: 0;
 `;
-// const MessageSpan = styled.span`
-//   display: inline-block;
-//   color: ${(props) => props.color.black};
-//   margin-bottom: 1rem;
-//   width: 100%;
-//   white-space: normal;
-//   box-sizing: border-box;
-// `;
 const ContainerIncorrectButton = styled.form`
   width: 100%;
 `;
@@ -175,22 +166,18 @@ const Button = () => {
     <Fragment>
       <MainFooter color={colors}>
         <ContainerButton>
-          <Link to="/home">
             <ButtonMain color={colors} type="submit" >
               Comprobar
             </ButtonMain>
-          </Link>
         </ContainerButton>
       </MainFooter>
       <MainFooterCorrect>
         <TextCorrect color={colors}>¡Buen trabajo!</TextCorrect>
 
         <ContainerCorrectButton>
-          <Link to="/home">
             <ButtonCorrect color={colors} type="submit">
               Continuar
             </ButtonCorrect>
-          </Link>
         </ContainerCorrectButton>
       </MainFooterCorrect>
       <MainFooterIncorrect>
@@ -200,11 +187,9 @@ const Button = () => {
         </ContainerMessage>
 
         <ContainerIncorrectButton>
-          <Link to="/home">
             <ButtonIncorrect color={colors} type="submit">
               Continuar
             </ButtonIncorrect>
-          </Link>
         </ContainerIncorrectButton>
       </MainFooterIncorrect>
     </Fragment>
