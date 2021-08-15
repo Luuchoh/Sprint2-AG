@@ -1,71 +1,67 @@
-import React from "react";
+import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
 
-import {  
+import {
   MenuBar,
   Lista,
   LiHome,
   LiStatitics,
   LiProfile,
-  AHome,
-  AStatitics,
-  AProfile,
-  Icon,
-  Span
-} from '../../style/NavbarInicio-styles';
-import { Colors } from '../../style/Colors'
+  Home,
+  Statitics,
+  Profile,
+  Span,
+} from "../../style/NavbarInicio-styles";
+import { Colors } from "../../style/Colors";
 
-
-
-const NavBarInicio = ({color}) => {
-
-
-  const ImgHome = (color) =>{
-    if(color === 'home') {
-      return './assets/icon-home-g.png'
+const NavBarInicio = ({ page }) => {
+  const colorHome = (page) => {
+    if (page === 'home') {
+      return Colors.green
     }else{
-      return './assets/icon-home-w.png'
+      return Colors.white
     }
   }
-  const ImgStatitics = (color) =>{
-    if(color === 'statitics') {
-      return './assets/icon-statitics-g.png'
+  const colorStati = (page) => {
+    if (page === 'statitics') {
+      return Colors.green
     }else{
-      return './assets/icon-statitics-w.png'
+      return Colors.white
     }
   }
-  const ImgProfile = (color) =>{
-    if(color === 'profile') {
-      return './assets/icon-profile-g.png'
+  const colorProf = (page) => {
+    if (page === 'profile') {
+      return Colors.green
     }else{
-      return './assets/icon-profile-w.png'
+      return Colors.white
     }
   }
 
   return (
-    <div>
+    <Fragment>
       <MenuBar color={Colors}>
         <Lista color={Colors}>
           <LiHome>
-            <AHome color={Colors} to="/home">
-              <Icon src={ImgHome(color)} alt="icon" />
-              <Span>home</Span>
-            </AHome>
+            <Link to="/home">
+              <Home color={colorHome(page)} />
+              <Span color={colorHome(page)}>home</Span>
+            </Link>
           </LiHome>
           <LiStatitics>
-            <AStatitics color={Colors} to="/Statitics">
-              <Icon src={ImgStatitics(color)} alt="icon" />
-              <Span>estadisticas</Span>
-            </AStatitics>
+            <Link to="/statitics">
+              <Statitics color={colorStati(page)} />
+              <Span color={colorStati(page)}>estadisticas</Span>
+            </Link>
           </LiStatitics>
           <LiProfile>
-            <AProfile color={Colors} to="/profile">
-              <Icon src={ImgProfile(color)} alt="icon" />
-              <Span>perfil</Span>
-            </AProfile>
+            <Link to="/profile">
+              <Profile color={colorProf(page)} />
+              <Span color={colorProf(page)}>perfil</Span>
+            </Link>
           </LiProfile>
         </Lista>
       </MenuBar>
-    </div>
+    </Fragment>
   );
 };
 

@@ -1,8 +1,7 @@
 import React from "react";
-import Button from '../Button';
 import { Link } from "react-router-dom";
 
-// import Button from "./Button";
+import Button from "./Button";
 import ProgressBar from "../ProgressBar";
 
 import { 
@@ -13,7 +12,7 @@ import {
   Organizar,
   Respuesta,
   Options,
-  Option
+  Option,
  } from "../../style/Question2-styles";
  import { Colors } from "../../style/Colors";
 
@@ -22,21 +21,19 @@ const Question2Comp = ({data}) => {
   const { pregunta, opcion1, opcion2, opcion3, opcion4, opcion5} = data;
 
 
+
   return (
     <QuestionMain color={Colors}>
       <ContainerQuestion color={Colors}>
         <Question4>
           <ProgressBar />
+
           <TitleMain color={Colors}>
             <h2>{pregunta}</h2>
           </TitleMain>
 
           <Organizar>
-            <Respuesta></Respuesta>
-            <Respuesta></Respuesta>
-            <Respuesta></Respuesta>
-            <Respuesta></Respuesta>
-            <Respuesta></Respuesta>
+            
           </Organizar>
 
           <Options>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const ContenedorPadre = styled.div`
-  width:100%;
+  height: 100%;
   background: black;
   backgroun-size: cover;
 `;
@@ -12,12 +12,16 @@ export const ContenedorLR = styled.div`
   height: 100%;
   box-sizing: border-box;
 
+  @media (min-height: 694px){
+    height: 100vh;
+ }
+
   @media (min-width: 728px) {
     width: 50vw;
     margin: auto;
   }
 
-  @media (min-width: 1028px){
+  @media (min-width: 1028px) {
     width: 25vw;
   }
 `;
@@ -126,7 +130,6 @@ export const ContainerUser = styled.div`
   text-align: center;
   color: #fff;
   margin: 20px 0;
-
 `;
 export const P = styled.p`
   margin: 0;

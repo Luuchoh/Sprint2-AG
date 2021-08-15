@@ -1,32 +1,45 @@
 import styled from "styled-components";
 
-
-
 export const Question2Div = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #16161A;
-  color: #FFFFFE;
+  background-color: #16161a;
+  color: #fffffe;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+
+  @media (min-heigth: 630px) {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 `;
 export const QuestionMain = styled.div`
-  width: 60%;
+  width: 100%;
+  heigth: 100vh;
   display: flex;
   justify-content: center;
   margin: 0px auto;
-  background-color: #16161A;
+  background-color: #16161a;
+  box-sizing: border-box;
 
   @media (min-width: 728px) {
-    width: 80%;
+    width: 55%;
+    heigth: 100vh;
+
     margin: auto;
     background-color: ${(props) => props.color.black};
   }
   @media (min-width: 1028px) {
-    width: 60%;
+    width: 100%;
+    heigth: 100vh;
+
     display: flex;
     justify-content: center;
     margin: 0px auto;
-    background-color: #16161A;
+    background-color: #16161a;
     width: 30%;
   }
 `;
@@ -36,22 +49,28 @@ export const ContainerQuestion = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  heigth: 100vh;
+  box-sizing: border-box;
 `;
 
 export const Question4 = styled.div`
   width: 100%;
+  heigth: 100vh;
+  box-sizing: border-box;
+  margin-bottom: 81px;
 `;
 export const TitleMain = styled.div`
   color: ${(props) => props.color.white};
   padding: 1rem;
   text-align: start;
-  
-  h2{
-      margin: 0;
-    }
+
+  h2 {
+    margin: 0;
+  }
 `;
 export const Organizar = styled.div`
-  height: 250px;
+  height: 40vh;
   display: grid;
   width: 75%;
   margin-left: 36px;
@@ -90,6 +109,11 @@ export const Option = styled.div`
   border: 1.8px solid #b099d8;
 
   a {
+    font-size: 0.9rem;
     color: deeppink;
   }
+  a::after {
+    backgroound: #ccc;
+  }
 `;
+

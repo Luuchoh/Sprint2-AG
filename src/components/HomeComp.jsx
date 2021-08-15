@@ -14,8 +14,6 @@ import {
 import { Colors } from '../style/Colors'
 
 
-
-
 const HomeComp = () => {
   return (
     <Main color={Colors}>

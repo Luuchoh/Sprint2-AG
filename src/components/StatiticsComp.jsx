@@ -2,6 +2,10 @@ import React from 'react';
 import '../style/style.css'
 import NavBarInicio from "../components/Navbars/NavBarInicio";
 import styled from 'styled-components';
+// import {
+    //    TimeFive
+//     MessageRounded
+// } from '@styled-icons/boxicons-regular'
 
 const Principal = styled.div`
     background: #16161A;

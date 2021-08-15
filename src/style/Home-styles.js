@@ -1,20 +1,19 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-
 export const HomeDiv = styled.div`
-    margin: -30px;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #16161A;
-    color: #FFFFFE;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #16161a;
+  color: #fffffe;
 `;
 
 export const Main = styled.div`
   width: 90%;
   margin: auto;
   background-color: ${(props) => props.color.black};
-  margin-top: -30px;
+  margin-bottom: 75px;
 
   @media (min-width: 768px) {
     width: 90%;
@@ -26,28 +25,22 @@ export const Main = styled.div`
   @media (min-width: 1028px) {
     width: 90%;
     margin: 0px auto;
-    margin-left:95px;
+    margin-left: 95px;
     background-color: ${(props) => props.color.black};
-    margin-top: -30px;
   }
 `;
 
 export const TitleMain = styled.h5`
-
-    width: 95%;
-    padding-top: 40px;
-    font-weight: 600;
-    margin: 0px auto;
-    font-size: 18px;
-    text-align: center;
-    padding-top: 61px;
-    color: ${(props) => props.color.white};
-    box-sizing: border-box;
-
-    
+  width: 95%;
+  padding-top: 40px;
+  font-weight: 600;
+  margin: 0px auto;
+  font-size: 18px;
+  text-align: center;
+  color: ${(props) => props.color.white};
+  box-sizing: border-box;
 `;
 export const Categories = styled.section`
-  width: 350px;
   margin: 0px auto;
   padding-bottom: 36px;
 `;
@@ -82,7 +75,7 @@ export const Section3 = styled.div`
   text-align: center;
 `;
 export const Language = styled.div`
-  width: calc(50% - 0px); 
+  width: calc(50% - 0px);
 `;
 
 export const Span = styled.span`

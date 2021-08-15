@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <HomeDiv>
       <ComponentHome />
-      <NavBarInicio color={'home'}/>
+      <NavBarInicio page={'home'}/>
     </HomeDiv>
     
   )

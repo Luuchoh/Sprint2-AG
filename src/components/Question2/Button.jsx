@@ -12,10 +12,20 @@ const MainFooter = styled.div`
   padding: 1rem;
   background-color: ${(props) => props.color.black};
   box-sizing: border-box;
+
+  @media (min-width: 728px){
+    width:55%
+  }
+
+  @media (min-width: 1028px){
+    width:30%
+  }
 `;
 
 const ContainerButton = styled.form`
   width: 100%;
+  box-sizing: border-box;
+
 `;
 
 const ButtonMain = styled.button`
@@ -31,6 +41,7 @@ const ButtonMain = styled.button`
   line-height: 16px;
   padding: 1rem;
   text-transform: uppercase;
+  box-sizing: border-box;
 
   &:disabled {
     background-color: #d4caf3;
@@ -46,6 +57,15 @@ const MainFooterCorrect = styled.div`
   z-index: -1;
   padding: 1rem;
   background-color: #acffcf;
+  box-sizing: border-box;
+
+  @media (min-width: 728px){
+    width:55%
+  }
+
+  @media (min-width: 1028px){
+    width:30%
+  }
 `;
 
 const TextCorrect = styled.p`
@@ -82,6 +102,14 @@ const MainFooterIncorrect = styled.div`
   padding: 1rem;
   background-color: #f9cfd7;
   box-sizing: border-box;
+
+  @media (min-width: 728px){
+    width:55%
+  }
+
+  @media (min-width: 1028px){
+    width:30%
+  }
 `;
 const ContainerMessage = styled.div`
   width: 100%;
