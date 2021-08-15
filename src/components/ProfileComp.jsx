@@ -8,8 +8,7 @@ const Contenedor = styled.div`
     background: black;
     color: white;
     `
-
-    @media {}
+    
 const Perfil = styled.div`
     margin-top: 10%;
     text-align: center;
