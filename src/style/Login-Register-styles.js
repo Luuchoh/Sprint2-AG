@@ -6,7 +6,7 @@ export const ContenedorPadre = styled.div`
   background: black;
   backgroun-size: cover;
 `;
-export const ContenedorLR = styled.div`
+export const ContenedorLogin = styled.div`
   background: black;
   width: 100vw;
   height: 100%;
@@ -14,6 +14,26 @@ export const ContenedorLR = styled.div`
 
   @media (min-height: 694px){
     height: 100vh;
+ }
+
+  @media (min-width: 728px) {
+    width: 50vw;
+    margin: auto;
+  }
+
+  @media (min-width: 1028px) {
+    width: 25vw;
+  }
+`;
+
+export const ContenedorRegister = styled.div`
+  background: black;
+  width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+
+  @media (min-height: 694px){
+    height: 100%;
  }
 
   @media (min-width: 728px) {

@@ -8,7 +8,7 @@ import logo from "../assets/img/logo-morado.png";
 import google from "../assets/img/icon-google.png";
 import { useForm } from "../hooks/useForm";
 import {
-  ContenedorLR,
+  ContenedorLogin,
   ContainerImagen,
   Imagen,
   Title,
@@ -49,7 +49,6 @@ const LoginComp = () => {
         .then((res) => {
           if (res.status === 200) {
             let resp = res.data;
-            console.log(resp);
             if (resp.length > 0) {
               let { id, name, lastName } = resp[0];
               Swal.fire({
@@ -60,7 +59,7 @@ const LoginComp = () => {
               });
               setTimeout(() => {
                 localStorage.setItem("user", JSON.stringify(id));
-                history.push("/Home");
+                history.go("/Home");
               }, 2000);
             } else {
               Swal.fire({
@@ -80,7 +79,7 @@ const LoginComp = () => {
   };
 
   return (
-    <ContenedorLR>
+    <ContenedorLogin>
       <ContainerImagen>
         <Imagen src={logo} alt="logo_daily" />
       </ContainerImagen>
@@ -119,7 +118,7 @@ const LoginComp = () => {
           <LinkReg to="/register">Inscribite</LinkReg>
         </ContainerUser>
       </Form>
-    </ContenedorLR>
+    </ContenedorLogin>
   );
 };
 

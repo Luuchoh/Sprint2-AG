@@ -9,7 +9,7 @@ import logo from "../assets/img/logo-morado.png";
 import "../style/estilo.css";
 import { useForm } from "../hooks/useForm";
 import {
-  ContenedorLR,
+  ContenedorRegister,
   ContainerImagen,
   Imagen,
   Title,
@@ -86,7 +86,7 @@ const RegisterComp = () => {
   };
 
   return (
-    <ContenedorLR>
+    <ContenedorRegister>
       <ContainerImagen>
         <Imagen src={logo} alt="logo_daily" />
       </ContainerImagen>
@@ -144,7 +144,7 @@ const RegisterComp = () => {
           <LinkReg to="/Login">Inicia sesión</LinkReg>
         </ContainerUser>
       </Form>
-    </ContenedorLR>
+    </ContenedorRegister>
   );
 };
 

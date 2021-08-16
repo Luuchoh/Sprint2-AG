@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 
 export const HomeDiv = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   box-sizing: border-box;
   background-color: #16161a;
   color: #fffffe;
+
+  @media (min-height: 619px) {
+    height: 100vh;
+  }  
 `;
 
 export const Main = styled.div`
@@ -21,7 +25,7 @@ export const Main = styled.div`
   }
   @media (min-width: 1028px) {
     width: 30%;
-    margin: 0px auto;
+    margin: auto;
   }
 `;
 
@@ -36,9 +40,13 @@ export const TitleMain = styled.h5`
   box-sizing: border-box;
 `;
 export const Categories = styled.section`
-  margin: 0px auto;
   padding-bottom: 36px;
+
+  @media (max-height: 619px) {
+    padding-bottom: 115px;
+  }
 `;
+  
 export const Section1 = styled.div`
   display: flex;
   flex-wrap: wrap;
