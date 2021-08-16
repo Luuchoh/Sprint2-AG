@@ -27,7 +27,7 @@ const ProgressBar = () => {
         <Content>
             <Barra></Barra>
             <Img src={union} alt="" />
-            <P>4</P>
+            <P id="oport">4</P>
         </Content>
     )
 }

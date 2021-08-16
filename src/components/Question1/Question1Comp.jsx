@@ -19,16 +19,22 @@ const Question1Comp = ({id}) => {
 
     useEffect(() => {
         obtenerDatos()
-    },[])
+    },)
 
     const obtenerDatos = async() =>{
+        try{
         const url =`https://dailybits.herokuapp.com/questionHtml/${id}`
         const resp  = await axios.get(url);
-        const data = await resp.data
-        setPregunta(data);
-        console.log(data);
-        return data
+        const data = await resp.data;
+        setPregunta(resp.data);
+        return data.id;
+    }catch(err){
+        alert(err.message);
+    } 
     }
+    
+
+
 
 
     return (
@@ -52,7 +58,7 @@ const Question1Comp = ({id}) => {
 
                 <div className="container_questionHTML">
                         <img src={pregunta.imag} alt="" />
-                        <p>¿Qué etiqueta es semánticamente correcta para el contenido principal?</p>
+                        <p>{pregunta.pregunta}</p>
                         
                 </div>
 

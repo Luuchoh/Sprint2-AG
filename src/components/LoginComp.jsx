@@ -90,7 +90,7 @@ const LoginComp = () => {
       </ContainerImagen>
       <Title>Inicia sesión</Title>
       <Form>
-        <LinkGoogle to="/Home">
+        <LinkGoogle to="/Login">
           <Logo src={google} alt="" />
           <span>Continuar con Google</span>
         </LinkGoogle>

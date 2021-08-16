@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import api from '../apiAxios/api';
 
 const Contenedor = styled.div`
     width: 100%;
@@ -20,19 +21,42 @@ const H3 = styled.h3`
 margin: 0 auto;
     text-align: center;
     `
+const Img = styled.img`
+    width: 100px;
+    height: 100px;
+    border-radius:100%;
+    text-align: center;
+    margin: 0 auto;
+`
 
 const ProfileComp = () => {
+
+    const [user,setUser] = useState([]);
+
+    useEffect(() =>{
+        getUsers();
+    }, [])
+
+    const getUsers = async() =>{
+    const resp = await api.get('https://dailybits.herokuapp.com/users');
+    setUser (resp.data[1]);
+    }
+
     return (
         
         <Contenedor>
+        <Fragment>
             <H3>Perfil</H3>
             <Perfil>
-                <img src="/" alt="" />
-                <h4>Francisco Javier</h4>
-                <p>francisco.javier@gmail.com</p>
+                <Img src={user.avatar} alt="" />
+                <h4>{user.name} {user.lastName}</h4>
+                <p>{user.email}</p>
                 
                 <Link to="/Login"><strong>Cerrar sesión</strong></Link>
             </Perfil>
+            </Fragment>  
+            
+            
 
             <div>
                 
