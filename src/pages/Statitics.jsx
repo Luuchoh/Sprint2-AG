@@ -8,7 +8,7 @@ const Statitics = () => {
     return (
         <Fragment>
         <StatiticsComp />
-        <NavBarInicio color={'statitics'}/>
+        <NavBarInicio page={'statitics'}/>
         </Fragment>
         
     )

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-//import { Link } from "react-router-dom";
 import axios from "axios";
 import "../../style/all-styles.css";
 import styled from "styled-components";
@@ -27,7 +26,7 @@ const Img = styled.img`
     margin-left: 10px;
 `
 
-const Question1Comp = () => {
+const JsComp = () => {
   const [pregunta, setPregunta] = useState([]);
   const [count, setCount] = useState(1);
   const [vidas, setVidas] = useState(4);
@@ -37,7 +36,7 @@ const Question1Comp = () => {
   }, [count]);
 
   const obtenerDatos = async (count) => {
-    const url = `https://dailybits.herokuapp.com/questionHtml/${count}`;
+    const url = `https://dailybits.herokuapp.com/questionJs/${count}`;
     const resp = await axios.get(url);
     const data = await resp.data;
     setPregunta(data);
@@ -129,4 +128,4 @@ const Question1Comp = () => {
   );
 };
 
-export default Question1Comp;
+export default JsComp;

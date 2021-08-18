@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 const MainFooter = styled.div`
     display: inline-block;
     padding: 0;
-    background-color: #16161A;
     background-color: ${(props) => props.color.black};
-
 `;
 
 const ContainerButton = styled.form`
@@ -53,7 +51,7 @@ const ContainerCorrectButton = styled.form`
   width: 100%;
 `;
 
-const ButtonCorrect = styled.button`
+export const ButtonCorrect = styled.button`
   width: 100%;
   background-color: ${(props) => props.color.green};
   color: ${(props) => props.color.white};
@@ -97,14 +95,6 @@ const MessageP = styled.p`
   color: ${(props) => props.color.black};
   margin: 0;
 `;
-// const MessageSpan = styled.span`
-//   display: inline-block;
-//   color: ${(props) => props.color.black};
-//   margin-bottom: 1rem;
-//   width: 100%;
-//   white-space: normal;
-//   box-sizing: border-box;
-// `;
 const ContainerIncorrectButton = styled.form`
   width: 100%;
 `;

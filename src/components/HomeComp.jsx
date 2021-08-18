@@ -14,8 +14,6 @@ import {
 import { Colors } from '../style/Colors'
 
 
-
-
 const HomeComp = () => {
   return (
     <Main color={Colors}>
@@ -36,7 +34,7 @@ const HomeComp = () => {
         <Section2>
           <Language>
             <ProgressBarCircle color={Colors}>
-              <ALink to="/Css">
+              <ALink to="/QuestionCss">
                 <img src="../assets/icon-CSS.png" alt="ask CSS" />
               </ALink>
             </ProgressBarCircle>
@@ -45,7 +43,7 @@ const HomeComp = () => {
 
           <Language>
             <ProgressBarCircle color={Colors}>
-              <ALink to="/Home">
+              <ALink to="/QuestionJs">
                 <img src="../assets/icon-JS.png" alt="ask JS" />
               </ALink>
             </ProgressBarCircle>

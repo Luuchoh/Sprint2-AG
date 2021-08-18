@@ -11,6 +11,7 @@ border: 1px solid white;
 margin-left: 5%;
 `
 const Content = styled.div`
+padding: 10px;
 display: flex;
 align-items:center;
 `
@@ -23,11 +24,13 @@ const Img = styled.img`
 `
 
 const ProgressBar = () => {
+    
+
     return (
         <Content>
             <Barra></Barra>
             <Img src={union} alt="" />
-            <P id="oport">4</P>
+            <P id="oport"></P>
         </Content>
     )
 }

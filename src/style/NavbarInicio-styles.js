@@ -1,31 +1,32 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-
+import { HomeAlt } from "@styled-icons/boxicons-regular";
+import { Pulse } from "@styled-icons/octicons";
+import { Person } from "@styled-icons/ionicons-sharp";
 
 export const MenuBar = styled.nav`
-  width: 100%;
-  height: 94px;
-  align-items: center;
   background-color: ${(props) => props.color.neutral};
-  display: flex;
-  justify-content: center;
-  margin-top: -16px;
-
+  width: 100vw;
+  height: 75px;
+  bottom: 0px;
+  position: fixed;
+  display: inline-block;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 15px;
 `;
 export const Lista = styled.ul`
-  display: flex;
-  width: 500px;
   background-color: ${(props) => props.color.neutral};
+  display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  padding-left: 3px;
-  height: 75px;
-  align-items: start;
-  margin-bottom: -5px;
-  margin-top: -2px;
-  padding-top: 15px;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   li {
-    background-color: #232E35;
+    background-color: #232e35;
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -37,9 +38,6 @@ export const Lista = styled.ul`
       text-align: center;
       box-sizing: border-box;
     }
-    a:hover {
-      color: ${(props) => props.color.white};
-    }
   }
 
   @media (min-width: 728px) {
@@ -48,8 +46,8 @@ export const Lista = styled.ul`
     align-items: center;
     flex-flow: row;
 
-    li{
-        background-color: ${(props) => props.color.neutral};
+    li {
+      background-color: ${(props) => props.color.neutral};
     }
   }
 `;
@@ -63,7 +61,7 @@ export const LiHome = styled.li`
   }
 `;
 export const LiStatitics = styled.li`
-  width: calc(25% - 15px);
+  width: calc(45% - 15px);
 `;
 export const LiProfile = styled.li`
   @media (min-width: 728px) {
@@ -74,21 +72,22 @@ export const LiProfile = styled.li`
     border-bottom-right-radius: 30%;
   }
 `;
-export const AHome = styled(Link)`
-  color: ${(props) => props.color.green};
+export const Home = styled(HomeAlt)`
+  width: 24px;
+  color: ${(props) => props.color};
 `;
-export const AStatitics = styled(Link)`
-  color: ${(props) => props.color.white};
+export const Statitics = styled(Pulse)`
+  width: 24px;
+  color: ${(props) => props.color};
 `;
-export const AProfile = styled(Link)`
-  color: ${(props) => props.color.white};
-`;
-export const Icon = styled.img`
-  display: inline-block;
+export const Profile = styled(Person)`
+  width: 24px;
+  color: ${(props) => props.color};
 `;
 export const Span = styled.span`
   display: inline-block;
   width: 100%;
+  color: ${(props) => props.color};
   margin: 0;
   padding: 0;
 `;

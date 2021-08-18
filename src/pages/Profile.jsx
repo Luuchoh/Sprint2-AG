@@ -6,7 +6,7 @@ const Profile = () => {
     return (
         <Fragment>
         <ProfileComp />
-        <NavBarInicio color={'profile'}/>
+        <NavBarInicio page={'profile'}/>
         </Fragment>
     )
 }

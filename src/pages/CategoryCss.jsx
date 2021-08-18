@@ -1,10 +1,10 @@
 import React from 'react'
-import Question1Comp from '../components/Question1/Question1Comp'
+import CssComp from '../components/category/CssComp'
 
 const CategoryCss = () => {
     return (
         
-        <Question1Comp />
+        <CssComp />
     )
 }
 

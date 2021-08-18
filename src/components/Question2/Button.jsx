@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const MainFooter = styled.div`
   width: 100vw;
@@ -12,10 +11,20 @@ const MainFooter = styled.div`
   padding: 1rem;
   background-color: ${(props) => props.color.black};
   box-sizing: border-box;
+
+  @media (min-width: 728px){
+    width:55%
+  }
+
+  @media (min-width: 1028px){
+    width:30%
+  }
 `;
 
 const ContainerButton = styled.form`
   width: 100%;
+  box-sizing: border-box;
+
 `;
 
 const ButtonMain = styled.button`
@@ -31,6 +40,7 @@ const ButtonMain = styled.button`
   line-height: 16px;
   padding: 1rem;
   text-transform: uppercase;
+  box-sizing: border-box;
 
   &:disabled {
     background-color: #d4caf3;
@@ -46,6 +56,15 @@ const MainFooterCorrect = styled.div`
   z-index: -1;
   padding: 1rem;
   background-color: #acffcf;
+  box-sizing: border-box;
+
+  @media (min-width: 728px){
+    width:55%
+  }
+
+  @media (min-width: 1028px){
+    width:30%
+  }
 `;
 
 const TextCorrect = styled.p`
@@ -82,6 +101,14 @@ const MainFooterIncorrect = styled.div`
   padding: 1rem;
   background-color: #f9cfd7;
   box-sizing: border-box;
+
+  @media (min-width: 728px){
+    width:55%
+  }
+
+  @media (min-width: 1028px){
+    width:30%
+  }
 `;
 const ContainerMessage = styled.div`
   width: 100%;
@@ -101,14 +128,6 @@ const MessageP = styled.p`
   color: ${(props) => props.color.black};
   margin: 0;
 `;
-// const MessageSpan = styled.span`
-//   display: inline-block;
-//   color: ${(props) => props.color.black};
-//   margin-bottom: 1rem;
-//   width: 100%;
-//   white-space: normal;
-//   box-sizing: border-box;
-// `;
 const ContainerIncorrectButton = styled.form`
   width: 100%;
 `;
@@ -147,22 +166,18 @@ const Button = () => {
     <Fragment>
       <MainFooter color={colors}>
         <ContainerButton>
-          <Link to="/home">
             <ButtonMain color={colors} type="submit" >
               Comprobar
             </ButtonMain>
-          </Link>
         </ContainerButton>
       </MainFooter>
       <MainFooterCorrect>
         <TextCorrect color={colors}>¡Buen trabajo!</TextCorrect>
 
         <ContainerCorrectButton>
-          <Link to="/home">
             <ButtonCorrect color={colors} type="submit">
               Continuar
             </ButtonCorrect>
-          </Link>
         </ContainerCorrectButton>
       </MainFooterCorrect>
       <MainFooterIncorrect>
@@ -172,11 +187,9 @@ const Button = () => {
         </ContainerMessage>
 
         <ContainerIncorrectButton>
-          <Link to="/home">
             <ButtonIncorrect color={colors} type="submit">
               Continuar
             </ButtonIncorrect>
-          </Link>
         </ContainerIncorrectButton>
       </MainFooterIncorrect>
     </Fragment>

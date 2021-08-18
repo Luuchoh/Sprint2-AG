@@ -3,21 +3,11 @@ import axios from "axios";
 import md5 from "md5";
 import Swal from "sweetalert2";
 import { useHistory } from "react-router-dom";
-
-const ContenedorLogin = styled.div`
-    background: black;
-    height: auto;
-    
-    @media (min-width: 375px)  and (max-width: 812px){
-       height:810px
-    }
-`;
-
 import logo from "../assets/img/logo-morado.png";
 import google from "../assets/img/icon-google.png";
 import { useForm } from "../hooks/useForm";
-import { 
-  ContenedorLR,
+import {
+  ContenedorLogin,
   ContainerImagen,
   Imagen,
   Title,
@@ -31,21 +21,17 @@ import {
   LinkPass,
   ContainerUser,
   P,
-  LinkReg
- } from "../style/Login-Register-styles";
-
-
-
+  LinkReg,
+} from "../style/Login-Register-styles";
 
 const LoginComp = () => {
   //Hook historial
   const history = useHistory();
   //Hook customizado
-  const [values, handleInputChange] =
-    useForm({
-      email: "",
-      password: "",
-    });
+  const [values, handleInputChange] = useForm({
+    email: "",
+    password: "",
+  });
 
   const { email, password } = values;
 
@@ -62,17 +48,17 @@ const LoginComp = () => {
         .then((res) => {
           if (res.status === 200) {
             let resp = res.data;
-            console.log(resp);
             if (resp.length > 0) {
-              let { name } = resp[0];
+              let { id, name, lastName } = resp[0];
               Swal.fire({
                 icon: "success",
                 title: "Bienvenido",
-                text: `${name}`,
+                text: `${(name, lastName)}`,
                 timer: 2000,
               });
               setTimeout(() => {
-                history.push("/Home");
+                localStorage.setItem("user", JSON.stringify(id));
+                history.go("/Home");
               }, 2000);
             } else {
               Swal.fire({
@@ -92,7 +78,7 @@ const LoginComp = () => {
   };
 
   return (
-    <ContenedorLR>
+    <ContenedorLogin>
       <ContainerImagen>
         <Imagen src={logo} alt="logo_daily" />
       </ContainerImagen>
@@ -128,12 +114,10 @@ const LoginComp = () => {
 
         <ContainerUser>
           <P>¿Aún no tienes cuenta?</P>
-          <LinkReg to="/register">
-            Inscribite
-          </LinkReg>
+          <LinkReg to="/register">Inscribite</LinkReg>
         </ContainerUser>
       </Form>
-    </ContenedorLR>
+    </ContenedorLogin>
   );
 };
 
