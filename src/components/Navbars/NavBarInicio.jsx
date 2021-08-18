@@ -12,7 +12,7 @@ import {
   Icon,
   Span
 } from '../../style/NavbarInicio-styles';
-import { Colors } from '../../style/Colors'
+import { Colors } from '../../style/Colors';
 
 
 

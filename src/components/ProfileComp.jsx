@@ -55,12 +55,6 @@ const ProfileComp = () => {
                 <Link to="/Login"><strong>Cerrar sesión</strong></Link>
             </Perfil>
             </Fragment>  
-            
-            
-
-            <div>
-                
-            </div>
         </Contenedor>
     )
 }

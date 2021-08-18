@@ -101,7 +101,7 @@ const LoginComp = () => {
           name="email"
           type="email"
           id="email"
-          placeholder="Ingresa su correo electrónico"
+          placeholder="Ingrese su correo electrónico"
           onChange={handleInputChange}
         />
 
@@ -110,7 +110,7 @@ const LoginComp = () => {
           name="password"
           type="password"
           id="password"
-          placeholder="Ingresa su correo electrónico"
+          placeholder="Ingrese su contraseña"
           onChange={handleInputChange}
         />
 

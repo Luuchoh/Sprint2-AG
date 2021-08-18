@@ -29,3 +29,7 @@ body {
     color: var(--color-white);
     font-family: var(--font-family);
 }
+
+.botonC{
+    background-color: green;
+}
