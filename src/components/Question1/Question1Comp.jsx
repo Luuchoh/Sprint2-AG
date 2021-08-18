@@ -19,8 +19,8 @@ const Question1Comp = () => {
         const resp  = await axios.get(url);
         const data = await resp.data
         setPregunta(data);
-        console.log(data);
-        return data;
+        //console.log(data);
+        return data
     }
     if(count === 4)
     {
@@ -92,7 +92,7 @@ return (
                         </label>
 
                     <button id="botonR" onClick={() => setCount(+(count+1))}>COMPROBAR</button>
-              
+                    
                 </div>
 
             </div>

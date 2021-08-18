@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState }  from 'react'
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -138,13 +138,15 @@ const colors = {
   tertiary: "#72757E",
 };
 
+
 const Button = () => {
+  //const [click, handleClick] = useState([]);
   return (
     <>
       <MainFooter color={colors}>
         <ContainerButton>
 
-            <ButtonMain color={colors} type="submit" >
+            <ButtonMain color={colors} type="submit">
               COMPROBAR
             </ButtonMain>
 

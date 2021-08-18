@@ -4,6 +4,14 @@ import md5 from "md5";
 import Swal from "sweetalert2";
 import { useHistory } from "react-router-dom";
 
+const ContenedorLogin = styled.div`
+    background: black;
+    height: auto;
+    
+    @media (min-width: 375px)  and (max-width: 812px){
+       height:810px
+    }
+`;
 
 import logo from "../assets/img/logo-morado.png";
 import google from "../assets/img/icon-google.png";

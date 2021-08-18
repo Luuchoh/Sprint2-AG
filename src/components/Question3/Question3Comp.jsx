@@ -25,22 +25,30 @@ const Header = styled.div`
 const Question3Comp = ({id}) => {
 
     const[pregunta , setPregunta] = useState([]);
+    const [acumulador, setAcumulador] = useState(1);
     
     
     useEffect(() => {
-        obtenerDatos()
-    },[])
+        obtenerDatos(id)
+    },[id])
 
-    const obtenerDatos = async() =>{
+    const obtenerDatos = async(id) =>{
         const url =`https://dailybits.herokuapp.com/options/${id}`
         const resp  = await axios.get(url);
         const data = await resp.data
         setPregunta(data);
-        console.log(data);
+        //console.log(data);
         return data
     }
-    console.log(pregunta.seleccion1)
 
+    const handleChange = () => {
+
+                alert('Respuesta correcta')
+                setAcumulador(acumulador+1)
+                console.log(acumulador)
+            
+
+    };//FIN HANDLECHANGE
 
     return (
         <ContenedorLogin>
@@ -51,21 +59,21 @@ const Question3Comp = ({id}) => {
 
                 <ul className="ul-Question5Html">
                     <li>
-                        <img  className="img-Question3"  src={pregunta.seleccion1} alt="" />
+                    <img  className="img-Question3"  src={pregunta.seleccion1} alt="" />
                         <p>Angular</p>
                     </li>
-                    <li>
-                    <img className="img-Question3" src={pregunta.seleccion2} alt="" />
+                    <li >
+                    <img className="img-Question3"  src={pregunta.seleccion2} onClick={handleChange} alt="" />
                         <p>Vue.js</p>
                     </li>
                 </ul>
                 <ul className="ul-Question5Html">
                     <li>
-                    <img  className="img-Question3" src={pregunta.seleccion4}  alt="" />
+                    <img  className="img-Question3"  src={pregunta.seleccion4} alt="" />
                         <p>Window</p>
                     </li>
                     <li>
-                    <img className="img-Question3" src={pregunta.seleccion3} alt="" />
+                    <img className="img-Question3"  src={pregunta.seleccion3} alt="" />
                         <p>Kotlin</p>
                     </li>
                 </ul>
