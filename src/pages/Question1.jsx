@@ -9,7 +9,7 @@ const Question1 = () => {
     return (
 
         
-        <Question1Comp></Question1Comp>
+        <Question1Comp ></Question1Comp>
         
 
     )

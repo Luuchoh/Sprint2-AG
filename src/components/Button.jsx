@@ -141,8 +141,6 @@ const colors = {
 
 const Button = () => {
   //const [click, handleClick] = useState([]);
-
-
   return (
     <>
       <MainFooter color={colors}>
