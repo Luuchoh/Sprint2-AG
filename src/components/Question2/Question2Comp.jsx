@@ -10,7 +10,6 @@ import {
   Question4,
   TitleMain,
   Organizar,
-  Respuesta,
   Options,
   Option,
  } from "../../style/Question2-styles";

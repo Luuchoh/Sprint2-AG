@@ -87,14 +87,15 @@ export const Span = styled.span`
 `;
 
 export const ProgressBarCircle = styled.div`
-  width: 86px;
-  height: 86px;
+  width: 96px;
+  height: 96px;
   border-radius: 50%;
   border: 10px solid ${(props) => props.color.white};
   margin: auto;
   margin-bottom: 8px;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 export const ALink = styled(Link)`
   margin: auto;
