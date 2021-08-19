@@ -42,7 +42,7 @@ const RegisterComp = () => {
   //Consumo de API
   const insertUser = async () => {
     try {
-      const url = `http://dailybits.herokuapp.com/users`;
+      const url = `https://dailybits.herokuapp.com/users`;
       const confirm = await axios.post(url, {
         id: uuid(),
         name: nombre,

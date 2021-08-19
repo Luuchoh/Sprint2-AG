@@ -37,7 +37,7 @@ const LoginComp = () => {
 
   const validatorUser = async () => {
     try {
-      const url = `http://dailybits.herokuapp.com/users`;
+      const url = `https://dailybits.herokuapp.com/users`;
       await axios
         .get(url, {
           params: {
