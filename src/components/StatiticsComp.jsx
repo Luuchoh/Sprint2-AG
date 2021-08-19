@@ -20,7 +20,11 @@ import {
 } from "../style/Statitics-styles";
 import { Colors } from "../style/Colors";
 
-const StatiticsComp = () => {
+const StatiticsComp = ({user}) => {
+  
+  const{ statitics }= user;
+
+
   return (
     <Principal>
       <Estadisticas>
@@ -49,7 +53,7 @@ const StatiticsComp = () => {
             <Time color={Colors.Negro} />
             <Text>Tiempo de estudio (horas)</Text>
             <Estadistica>
-              <Text>0</Text>
+              <Text>{statitics?statitics.timeHours: 0}</Text>
             </Estadistica>
           </ContainerEstadistica>
 
@@ -57,7 +61,7 @@ const StatiticsComp = () => {
             <Message color={Colors.Negro} />
             <Text>Respuestas contestadas</Text>
             <Estadistica>
-              <Text>4</Text>
+              <Text>{statitics?statitics.constrainedQuestions: 0}</Text>
             </Estadistica>
           </ContainerEstadistica>
 
@@ -66,7 +70,7 @@ const StatiticsComp = () => {
 
             <Text>Respuestas correctas</Text>
             <EstadisticaCorrect color={Colors.green}>
-              <span>3</span>
+              <span>{statitics?statitics.CorrectQuestions: 0}</span>
             </EstadisticaCorrect>
           </ContainerEstadistica>
 
@@ -75,7 +79,7 @@ const StatiticsComp = () => {
 
             <Text>Respuestas incorrectas</Text>
             <EstadisticaIncorrect color={Colors.red}>
-              <span>1</span>
+              <span>{statitics?statitics.IncorrectQuestion: 0}</span>
             </EstadisticaIncorrect>
           </ContainerEstadistica>
         </Row>

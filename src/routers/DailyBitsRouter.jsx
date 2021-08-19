@@ -20,7 +20,7 @@ import { PrivateRouter } from "./PrivateRouter";
 import { PublicRouter } from "./PublicRouter";
 
 const DailyBitsRouter = () => {
-  const [isLoggedIn, setisLoggedIn] = useState();
+  const [isLoggedIn, setisLoggedIn] = useState(false);
 
   useEffect(() => {
     if (localStorage.getItem("user")) {
@@ -28,7 +28,7 @@ const DailyBitsRouter = () => {
     } else {
       setisLoggedIn(false);
     }
-  }, [isLoggedIn]);
+  }, []);
   return (
     <Router>
       <Switch>
@@ -96,7 +96,7 @@ const DailyBitsRouter = () => {
         />
         <PrivateRouter
           exact
-          path="/profile"
+          path="/Profile"
           isAuthenticated={isLoggedIn}
           component={Profile}
         />

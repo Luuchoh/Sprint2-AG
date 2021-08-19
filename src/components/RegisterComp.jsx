@@ -49,15 +49,15 @@ const RegisterComp = () => {
         lastName: apellido,
         email: correo,
         password: md5(pass),
-        avatar: urlImage?urlImage:'http://misimagenesde.com/wp-content/uploads/2017/05/foto-de-perfil-1.jpg',
-        statitics: [
-          {
-            timeHours: 0,
-            constrainedQuestions: 0,
-            CorrectQuestions: 0,
-            IncorrectQuestion: 0,
-          },
-        ],
+        avatar: urlImage
+          ? urlImage
+          : "http://misimagenesde.com/wp-content/uploads/2017/05/foto-de-perfil-1.jpg",
+        statitics: {
+          timeHours: 0,
+          constrainedQuestions: 0,
+          CorrectQuestions: 0,
+          IncorrectQuestion: 0,
+        },
       });
 
       if (confirm.status === 201) {
@@ -67,9 +67,9 @@ const RegisterComp = () => {
           timer: 2000,
         });
         setTimeout(() => {
-          history.push("/login");
+          history.push("/Login");
         }, 2000);
-      }else{
+      } else {
         Swal.fire({
           icon: "Error",
           title: "El usuario no se ha podido registrar",
