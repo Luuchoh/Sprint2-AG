@@ -138,7 +138,7 @@ const RegisterComp = () => {
         </ContainerFile>
         <Input type="text" name="urlImage" id="urlImage" disabled />
 
-        <Button onClick={insertUser}>Iniciar sesión</Button>
+        <Button onClick={insertUser}>Registrar</Button>
         <ContainerUser>
           <P>¿Ya tienes cuenta?</P>
           <LinkReg to="/Login">Inicia sesión</LinkReg>

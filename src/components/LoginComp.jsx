@@ -53,7 +53,7 @@ const LoginComp = () => {
               Swal.fire({
                 icon: "success",
                 title: "Bienvenido",
-                text: `${(name, lastName)}`,
+                text: `${name + ' ' + lastName}`,
                 timer: 2000,
               });
               setTimeout(() => {
