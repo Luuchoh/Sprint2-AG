@@ -12,7 +12,7 @@ export const ContenedorLogin = styled.div`
   height: 100%;
   box-sizing: border-box;
 
-  @media (min-height: 694px){
+  @media (min-height: 671px){
     height: 100vh;
  }
 
@@ -32,8 +32,8 @@ export const ContenedorRegister = styled.div`
   height: 100%;
   box-sizing: border-box;
 
-  @media (min-height: 694px){
-    height: 100%;
+  @media (min-height: 881px){
+    height: 100vh;
  }
 
   @media (min-width: 728px) {
