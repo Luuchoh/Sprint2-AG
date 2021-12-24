@@ -149,7 +149,7 @@ p.answer::after{
 .container_questionHTML {
     display: flex;
     justify-content: center;
-    margin-top: 59px;
+    margin-top: 45px;
     margin-left: -20px;
     align-items: inherit;
 }
@@ -179,7 +179,7 @@ p.answer::after{
 .container__input {
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    margin-top: 15px;
     justify-content: center;
     align-items: center;
 }
@@ -210,13 +210,6 @@ p.answer::after{
     -webkit-appearance: none;
     -moz-appearance: none;
     border-radius: 20px;
-}
-
-.input-radio:checked {
-    background-size: 15px;
-    border: 0px;
-    image-rendering: inherit;
-    background-repeat: round;
 }
 
 .container__input--button, .continuartrue, .continuarNottrue {

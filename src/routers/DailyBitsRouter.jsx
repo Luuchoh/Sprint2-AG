@@ -1,103 +1,71 @@
-import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
+  Route,
   Redirect,
 } from "react-router-dom";
 import Home from "../pages/Home";
 import Question1 from "../pages/Question1";
-import Question2 from "../pages/Question2";
 import Profile from "../pages/Profile";
 import Statitics from "../pages/Statitics";
 
 import { inicio } from "../pages/inicio";
-import Login from "../pages/Login";
-import Register from "../pages/Register";
-import Question3 from "../pages/Question3";
 import CssComp from "../components/category/CssComp";
 import JsComp from "../components/category/JsComp";
-import { PrivateRouter } from "./PrivateRouter";
-import { PublicRouter } from "./PublicRouter";
+import MongoComp from '../components/category/MongoComp';
+import JavaComp from '../components/category/JavaComp';
+
 
 const DailyBitsRouter = () => {
-  const [isLoggedIn, setisLoggedIn] = useState();
-
-  useEffect(() => {
-    if (localStorage.getItem("user")) {
-      setisLoggedIn(true);
-    } else {
-      setisLoggedIn(false);
-    }
-  }, [isLoggedIn]);
+  
   return (
     <Router>
       <Switch>
-        <PublicRouter
+        <Route
           exact
           path="/"
-          isAuthenticated={isLoggedIn}
           component={inicio}
         />
-        <PublicRouter
-          exact
-          path="/Login"
-          isAuthenticated={isLoggedIn}
-          component={Login}
-        />
-        <PublicRouter
-          exact
-          path="/Register"
-          isAuthenticated={isLoggedIn}
-          component={Register}
-        />
 
-        <PrivateRouter
+        <Route
           exact
           path="/Home"
-          isAuthenticated={isLoggedIn}
           component={Home}
         />
-        <PrivateRouter
+        <Route
           exact
           path="/Question1"
-          isAuthenticated={isLoggedIn}
           component={Question1}
         />
-        <PrivateRouter
+        <Route
           exact
           path="/QuestionCss"
-          isAuthenticated={isLoggedIn}
           component={CssComp}
         />
-        <PrivateRouter
+        <Route
           exact
           path="/QuestionJs"
-          isAuthenticated={isLoggedIn}
           component={JsComp}
         />
-        <PrivateRouter
+        <Route
           exact
-          path="/Question2"
-          isAuthenticated={isLoggedIn}
-          component={Question2}
+          path="/QuestionJava"
+          component={JavaComp}
         />
-        <PrivateRouter
+        <Route
           exact
-          path="/Question3"
-          isAuthenticated={isLoggedIn}
-          component={Question3}
+          path="/QuestionMongo"
+          component={MongoComp}
         />
 
-        <PrivateRouter
+        <Route
           exact
           path="/Statitics"
-          isAuthenticated={isLoggedIn}
           component={Statitics}
         />
-        <PrivateRouter
+        <Route
           exact
           path="/profile"
-          isAuthenticated={isLoggedIn}
           component={Profile}
         />
       </Switch>

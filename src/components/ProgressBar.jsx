@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import union from '../assets/img/Union.png'
+import dolar from '../assets/img/dolar.png'
 
 const Barra = styled.div`
 background-color: green;
@@ -20,6 +20,8 @@ const P = styled.p`
     color: white;
 `
 const Img = styled.img`
+    width: 35px;
+    height: 25px;
     margin-left: 10px;
 `
 
@@ -29,7 +31,7 @@ const ProgressBar = () => {
     return (
         <Content>
             <Barra></Barra>
-            <Img src={union} alt="" />
+            <Img src={dolar} alt="" />
             <P id="oport"></P>
         </Content>
     )

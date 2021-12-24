@@ -136,22 +136,17 @@ color:white;
     margin-top: 20px;;
 }
 
-#botonR{
+.botonR{
     margin-top: 29px;
     margin-bottom: 10px;
-    width: 328px;
+    width: 95%;
     height: 45px;
-    background: #D4CAF3;
+    background-color:red;
     border: 0px;
     border-radius: 16px;
     color: white;
     display: flex;
-    font-weight: 500;
+    font-weight: bold;
     align-items: center;
     justify-content: center;
-
 }
-
-#buttonR:disabled {
-    background-color: #d4caf3;
-  }

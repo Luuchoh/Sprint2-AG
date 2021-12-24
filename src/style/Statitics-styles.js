@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TimeFive, MessageRounded } from "@styled-icons/boxicons-regular";
+import { BiDollar } from "react-icons/bi";
 
 export const Principal = styled.div`
   background: #16161a;
@@ -26,6 +26,7 @@ export const H2 = styled.div`
   padding: 1rem 0;
   color: white;
   h2 {
+    text-align: center;
     margin: 0;
   }
 `;
@@ -41,16 +42,11 @@ export const ContainerEstadistica = styled.div`
   border: 2px solid grey;
   border-radius: 8px;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin: 40px auto 50px auto;
   box-sizing:border-box;
 
 `;
-export const Time = styled(TimeFive)`
-  width: 24px;
-  margin: 0 8px;
-  color: ${(props) => props.color};
-`;
-export const Message = styled(MessageRounded)`
+export const Time = styled(BiDollar)`
   width: 24px;
   margin: 0 8px;
   color: ${(props) => props.color};

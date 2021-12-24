@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { HomeAlt } from "@styled-icons/boxicons-regular";
-import { Pulse } from "@styled-icons/octicons";
-import { Person } from "@styled-icons/ionicons-sharp";
+import { BiHomeAlt } from "react-icons/bi";
+import { BiStats } from "react-icons/bi";
+
 
 export const MenuBar = styled.nav`
   background-color: ${(props) => props.color.neutral};
@@ -18,11 +18,11 @@ export const Lista = styled.ul`
   background-color: ${(props) => props.color.neutral};
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   height: 100%;
   list-style: none;
-  margin: 0;
+  margin: 0 auto 0 10%;
   padding: 0;
 
   li {
@@ -63,25 +63,12 @@ export const LiHome = styled.li`
 export const LiStatitics = styled.li`
   width: calc(45% - 15px);
 `;
-export const LiProfile = styled.li`
-  @media (min-width: 728px) {
-    border-top-right-radius: 25%;
-  }
-  @media (min-width: 1028px) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 30%;
-  }
-`;
-export const Home = styled(HomeAlt)`
-  width: 24px;
+export const Home = styled(BiHomeAlt)`
+  width: 44px;
   color: ${(props) => props.color};
 `;
-export const Statitics = styled(Pulse)`
-  width: 24px;
-  color: ${(props) => props.color};
-`;
-export const Profile = styled(Person)`
-  width: 24px;
+export const Statitics = styled(BiStats)`
+  width: 44px;
   color: ${(props) => props.color};
 `;
 export const Span = styled.span`

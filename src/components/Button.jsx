@@ -137,7 +137,7 @@ const Button = () => {
         <ContainerButton>
 
             <ButtonMain color={colors} type="submit">
-              COMPROBAR
+              SIGUIENTE
             </ButtonMain>
 
         </ContainerButton>

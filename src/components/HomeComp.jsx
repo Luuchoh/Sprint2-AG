@@ -12,6 +12,8 @@ import {
   Span
 } from '../style/Home-styles';
 import { Colors } from '../style/Colors'
+import java from '../assets/img/java.png'
+import mongo from '../assets/img/mongo.png'
 
 
 const HomeComp = () => {
@@ -54,20 +56,20 @@ const HomeComp = () => {
         <Section3>
           <Language>
             <ProgressBarCircle color={Colors}>
-              <ALink to="/Home">
-                <img src="../assets/icon-figma.png" alt="ask Figma" />
+              <ALink to="/QuestionJava">
+                <img src={java} alt="java" />
               </ALink>
             </ProgressBarCircle>
-            <Span>figma</Span>
+            <Span>Java</Span>
           </Language>
 
           <Language>
             <ProgressBarCircle color={Colors}>
-              <ALink to="/Home">
-                <img src="../assets/icon-UX.png" alt="ask UX" />
+              <ALink to="/QuestionMongo">
+                <img src={mongo} alt="mongo" />
               </ALink>
             </ProgressBarCircle>
-            <Span>ux</Span>
+            <Span>MongoDB</Span>
           </Language>
         </Section3>
       </Categories>

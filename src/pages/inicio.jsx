@@ -16,7 +16,7 @@ export const inicio = () => {
     return (
             <Fragment>
                 <Inicio>
-                    <Link to="/Login">
+                    <Link to="/Home">
                         <img src={logo} alt="logo_daily"/>
                     </Link>
                 </Inicio>

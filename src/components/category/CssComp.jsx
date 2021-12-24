@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Swal from 'sweetalert2';
+import { Img } from "../Question1/Question1Comp";
 import "../../style/all-styles.css";
 import styled from "styled-components";
-import union from '../../assets/img/Union.png'
+import dolar from '../../assets/img/dolar.png'
 
 
 const Barra = styled.div`
@@ -22,14 +24,11 @@ const P = styled.p`
     margin-left: 4px;
     color: white;
 `
-const Img = styled.img`
-    margin-left: 10px;
-`
 
 const CssComp = () => {
   const [pregunta, setPregunta] = useState([]);
   const [count, setCount] = useState(1);
-  const [vidas, setVidas] = useState(4);
+  const [vidas, setVidas] = useState(0);
 
   useEffect(() => {
     obtenerDatos(count);
@@ -42,34 +41,38 @@ const CssComp = () => {
     setPregunta(data);
     return data;
   };
-  if (count === 4) {
-    window.location = "/Question2";
-  }
 
   const handleClick = (e) => {
     if (e.target.value === pregunta.correct) {
-      correcta();
-      console.log("su respuesta es correcta");
+      setVidas(vidas + 100);
+
+      Swal.fire({
+        icon: "success",
+        title: "Correcta",
+        text: "Buen Trabajo",
+        timer: 2000,
+      })
+      setTimeout(() => {
+        setCount(+(count + 1))
+      }, 2200);
+      
     } else {
         console.log ('su respuesta es incorrecta');
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Respuesta Incorrecta",
+        })
+        setTimeout(() => {
+          window.location = '/Home';
+        }, 2000);
+        setVidas(0);
+        
     }
   };
-
-  const correcta = () => {
-    const boton = document.getElementById("botonR");
-    boton.className = ".botonC";
-    console.log((boton.className = "botonC"));
-  };
   
-  const handleSubmit = (e)=>{
-
-        setCount(+(count + 1));
-        setVidas(vidas - 1);
-    
-    if (vidas === 1){
-        window.location = '/Home'  
-    } 
-        
+  const handleSubmit = ()=>{
+    window.location = "/Home"
   }
 
   return (
@@ -77,7 +80,7 @@ const CssComp = () => {
       <div className="questionsOne">
         <Content>
           <Barra></Barra>
-          <Img src={union} alt="" />
+          <Img src={dolar} alt="" />
           <P id="oport">{vidas}</P>
         </Content>
 
@@ -121,7 +124,19 @@ const CssComp = () => {
             />
           </label>
 
-          <button id="botonR" onClick={handleSubmit}>COMPROBAR</button>
+          <label className="container__label">
+            {pregunta.respuesta4}
+            <input
+              name="input-radio"
+              type="radio"
+              className="input-radio"
+              value={pregunta.respuesta4}
+              onChange={pregunta.values}
+              onClick={handleClick}
+            />
+          </label>
+
+          <button className="botonR" onClick={handleSubmit}>SIGUIENTE</button>
         </div>
       </div>
     </div> //FIN
